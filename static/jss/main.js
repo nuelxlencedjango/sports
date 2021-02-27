@@ -27,13 +27,23 @@ $(document).ready(function (){
     // owl carousel for blog
     $('.owl-carousel').owlCarousel({
         loop :true,
-        autoplay:false,
+        autoplay:true,
        autoplayTimeout:3000,
-        dots:false,
+        dots:true,
         nav:true,
-        navText:[$('.owl-navigation .owl-nav-prev'), $('.owl-navigation .owl-nav-next')],
-        responsive: responsive
+       // navText:[$('.owl-navigation .owl-nav-prev'), $('.owl-navigation .owl-nav-next')],
+       // responsive: responsive
     });
+ // needs to be fixed 
+   // $('.owl-carouse').owlCarousel({
+     //   loop :true,
+      //  autoplay:false,
+      // autoplayTimeout:2000,
+      //  dots:false,
+      //  nav:true,
+      //  navText:[$('.owl-navigation .owl-nav-prev'), $('.owl-navigation .owl-nav-next')],
+      //  responsive: responsive
+    //});
 
     //click to scroll up
 

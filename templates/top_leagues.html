@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}   
+{% block content %}
+
+
+<h1 style="background-color: teal;">hello babe</h1>
+
+
+<center class="updatecolor">
+       
+   <h2>Table Update </h2>
+   <form action="{% url 'info:spanish' %}" method="POST">
+      {% csrf_token %}
+     <aside id="sidebar" class="left-bar">
+        <div class="feature-matchs">
+           <table class="table table-bordered table-hover">
+              <thead>
+                 <tr>
+                    <th>#</th>
+                    <th class="club">Team</th>
+                    <th class="p">P</th>
+                    <th class="w">W</th>
+                    <th class="d">D</th>
+                    <th class="l">L</th>
+                    <th class="gf">GF</th>
+                    <th class="ga">GA</th>
+                    <th class="pts">pts gn</th>
+                    <th class="tot">total_point</th>
+                 </tr>
+              </thead>
+              <tbody>
+         
+                 <tr>
+                    <td> </td>
+                    <div class="team_name">
+                    <td></td>
+                    <td><input class="team_name" autocomplete="off" type="text" id ="name" name="team_name" ></td>
+                    </div>
+                   <div class="match_played">
+                    <td><input class="pp" type="text" autocomplete="off" id="played" name="played" ></td>
+                   </div>
+                   <div class="win">
+                    
+                      <td><input class="ww" type="text" name="win" ></td>
+                   </div>
+                   <div class="draw">
+                    <td><input class="dd" type="text" name="draw" ></td>
+                 </div>
+                 <div class="lost">
+                    <td><input class="ll" type="text" name="lost" ></td>
+                 </div>
+                 <div class="goalf">
+                    <td><input class="gff" type="text" name="goalf" ></td>
+                 </div>
+                 <div class="goala">
+                    <td><input class="gaa" type="text" name="goala" ></td>
+                 </div>
+                 <div class="pts">
+                    <td><input class="pts" type="text" name="pts" ></td>
+                 </div>
+                 <div class="pts">
+                    <td><input class="pts" type="text" name="pts" ></td>
+                 </div>
+                 </tr>
+        
+              </tbody>
+              
+           </table>
+        </div>
+
+     <button type="submit" class="save btn btn-default" style="background-color: #AC9C63;;">Update</button> 
+     </aside>
+     
+   </form>
+   <div class="update">
+      <h2>Table Update </h2>
+   </div>-->
+  
+
+
+
+    {% endblock %}
+
+   

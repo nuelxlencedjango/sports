@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}   
+{% block content %}
+
+<div class="trainimg">
+
+<div class="images">
+    {% for pic in training %}
+    <img onclick="func(this)" src="{{ pic.img.url }}" alt="">
+    {% endfor %}
+</div>
+
+<!--<div class="pre">
+    <a onclick="this.parentElement.style.display='none'" class="icon-close"><i class="fas fa-times-circle"></i></a>
+    <img id="p" src="/static/img/arsenal1.jpg" alt="">
+</div>-->
+</div>
+
+
+
+
+<!--<div class="trainimg">
+
+    <div class="images">
+ 
+        <img onclick="func(this)" src="/static/img/pep1.jpg" alt="">
+       <img onclick="func(this)" src="/static/img/pep5.jpg" alt="">
+        <img onclick="func(this)" src="/static/img/pep1.jpg" alt="">
+        <img onclick="func(this)" src="/static/img/ny.jpeg" alt="">
+        <img onclick="func(this)" src="/static/img/ms.jpg" alt="">
+        <img onclick="func(this)" src="/static/img/arsenal1.jpg" alt="">
+
+    </div>
+    
+    <div class="pre">
+        <a onclick="this.parentElement.style.display='none'" class="icon-close"><i class="fas fa-times-circle"></i></a>
+        <img id="p" src="/static/img/arsenal1.jpg" alt="">
+    </div>
+    </div>-->
+
+<!--<script>
+    var p = document.getElementById("p");
+    function func(image){
+        p.src=image.src;
+        p.parentElement.style.display="block";
+    }
+
+</script>
+
+<div class="boxes">
+    <span style="--i:1;"><img src="/static/img/applelap.jpg" alt=""></span>
+
+    <span style="--i:2;"><img src="/static/img/about1.jpg" alt=""></span>
+    <span style="--i:3;"><img src="/static/img/about2.jpg" alt=""></span>
+    <span style="--i:4;"><img src="/static/img/arsenal1.jpg" alt=""></span>
+    <span style="--i:5;"><img src="/static/img/arsenal2.jpg" alt=""></span>
+    <span style="--i:6;"><img src="/static/img/rs.jpg" alt=""></span>
+    <span style="--i:7;"><img src="/static/img/arsenal5.jpg" alt=""></span>
+    <span style="--i:8;"><img src="/static/img/backimg.jpeg" alt=""></span>
+    <span style="--i:9;"><img src="/static/img/camera1.jpg" alt=""></span>
+    <span style="--i:10;"><img src="/static/img/car.jpg" alt=""></span>
+    <span style="--i:11;"><img src="/static/img/city.jpg" alt=""></span>
+
+    <span style="--i:12;"><img src="/static/img/city1.jpg" alt=""></span>
+</div>-->
+
+
+{% endblock content %}

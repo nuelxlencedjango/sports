@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}   
+{% block content %}
+
+
+<form action="{% url 'info:search' %}" method="GET" class="form-inline my-2 my-lg-0">
+  <br>
+  <input type="search" name="search" id="search" placeholder="player's name" class="form-control mr-sm-2"
+  aria-label="search">
+  <button type="submit" class="minbtn" >Search For A Player</button>
+</form>
+<section style="margin-top: 70px;">
+    <h2 style="text-align: center;">Players Details</h2>
+    <div class="flex-container">
+        {% for player in footballers %}
+        <a href="#">
+        <div class="card" style="width: 18rem; height: 30rem;">
+            <img src="{{ player.image.url }}" class="card-img-top" alt="...">
+            <div class="card-body" style="background: #fff;">
+              
+
+                <h5 style="text-align: right;">{{ player.first_name }}</h>
+             
+              <h5><a class="card-title" href="">{{ player.last_name }}</a></h5>
+              <p class="card-text">{{ player.address }} 
+              <p class="card-text">{{ player.phone }} 
+               
+                <p class="card-text">{{ player.position }} 
+                <p class="card-text">{{ player.email }}    
+                
+                 <!--<small>Trainer/Coach : {{ blog.trainer }}</small><br>-->
+            
+              <!--<a href="" class="cta">Learn more <i class="fal fa-angle-right" aria-hidden="true"></i></a>-->
+              <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+            </div>
+          </div>
+        </a>
+          {% endfor %}
+         </div>
+</section>
+
+{% endblock %}
+

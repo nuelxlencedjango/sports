@@ -1,0 +1,50 @@
+
+{% extends 'base.html' %}
+{% load static %}   
+{% block content %}
+
+{% if news %}
+<div class="detail">
+    <div class="content clearfix">
+        <div class="main-content">
+            <!--<h2 class="recent-post-title">Recent post</h2>-->
+            <div class="post">
+                <img class="post-image" src="{{ object.img.url }}" alt="">
+                <div class="post-preview">
+                    <h2><a href=""></a>{{ object.title}}</h2>
+                   
+                    <i class="far calender">{{ object.date_posted }}</i>
+                    <p>{{ object.content }}</p>
+                </div>
+            </div>
+        </div>
+        <!--<div class="sidebarr">
+            
+        </div>-->
+    </div>
+</div>
+{% else %}
+<div class="detail">
+    <div class="content clearfix">
+        <div class="main-content">
+            <!--<h2 class="recent-post-title">Recent post</h2>-->
+            <div class="post">
+                <img class="post-image" src="{{ object.img.url }}" alt="">
+                <div class="post-preview">
+                    <h2><a href=""></a>{{ object.title}}</h2>
+                   
+                    <i class="far calender">{{ object.date_posted }}</i>
+                    <p>{{ object.content }}</p>
+                </div>
+            </div>
+        </div>
+        <!--<div class="sidebarr">
+            
+        </div>-->
+    </div>
+</div>
+{% endif %}
+
+
+
+{% endblock content %}

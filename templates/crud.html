@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+{% load static %}   
+{% block content %}
+
+    <div class="container">
+        <div class="create">
+            <a href="{% url 'firstapp:link' %}"><h1>Create</h1></a>
+        </div>
+        <div class="create">
+            <a href="{% url 'firstapp:update_link'  %}"><h1>Update</h1></a>
+        </div>
+        <div class="create">
+            <a href=""><h1>Fetch</h1></a>
+        </div>
+        <div class="create">
+            <a href=""><h1>Delete</h1></a>
+        </div>
+    </div>
+
+ 
+   
+
+    {% endblock %}

@@ -1,0 +1,15 @@
+
+<div class="container" align="center">
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p}}
+    
+        <input type="submit" value="Insert Record" class="btn btn-primary btn-lg">
+    </form>
+    <br>
+    <a href="{% url 'info:show' %}" class="btn btn-primary btn-lg">Show Details</a>
+    
+    </div>
+
+    

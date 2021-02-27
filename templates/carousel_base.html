@@ -1,0 +1,2409 @@
+<style>
+    .fslider{
+    margin-top: 0px;
+    background-color: #AC9C63;
+
+    }
+.slider .card{
+   background: green;
+   flex: 1;
+   margin: 0 10px;
+}
+.slider .card .img{
+   height: 200px;
+   width: 100%;
+}
+.slider .card .img img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+}
+.slider .card .content{
+   padding: 10px 20px;
+}
+.slider .card .content .title{
+   font-size: 25px;
+   font-weight: 600;
+}
+.slider .card .content .sub-title{
+   font-size: 20px;
+   font-weight: 600;
+   color: #e74c3c;
+   line-height: 20px;
+}
+
+
+.card .content p{
+   text-align: justify;
+   margin: 10px 0;
+   background-color: red;
+}
+.card .content .btn{
+   display: block;
+   text-align: left;
+   margin: 10px 0;
+
+}
+.card .content .btn button{
+   background: #e74c3c;
+   color: #fff;
+   border: none;
+   outline: none;
+   font-size: 17px;
+   padding: 5px 8px;
+   border-radius: 20px;
+   cursor: pointer;
+   transition: 0.2s;
+}
+.card .content .btn button:hover{
+   transform: scale(0.9);
+   background:  black;
+}
+.section-intro {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-bottom: 60px;
+}
+.cta {
+   text-transform: uppercase;
+   font-size: 16px;
+   font-family: NTF-Grand-Regular;
+   text-decoration: none;
+   display: inline-block;
+   position: relative;
+}
+
+.cta::after {
+   content: '';
+   position: absolute;
+   width: 100%;
+   transform: scaleX(0);
+   height: 2px;
+   bottom: 0;
+   left: 0;
+   background-color: #AC9C63;
+   transform-origin: bottom right;
+   transition: transform .25s cubic-bezier(.86,0,.07,1);
+}
+b, strong {
+   font-weight: bolder;
+}
+
+strong {
+   font-weight: bold;
+}
+
+.meetteam .team .team-item{
+   position: relative;
+   background-color: green;
+   display: flex;
+}
+.team{
+   display: flex;
+}
+.meetteam .team .team-item .team-data{
+   position: absolute;
+   bottom: -65px;
+   left: 0;
+   width: 100%;
+   height: auto;
+   background-color: #3498db;
+   padding: 15px 0px;
+   color: white;
+ transition: .3s;
+ text-align: center;  
+}
+.meetteam .team .team-item.active .team-data,
+.meetteam .team .team-item:hover .team-data{
+   bottom: 0px;
+   transition: .3s;
+}
+.meetteam .team .team-item .team-data .name-pos h5{
+   text-transform: uppercase;
+   font-weight: bold;
+   font-size: 16px;
+}
+.meetteam .team .team-item .team-data .name-pos p{
+   text-transform: uppercase;
+   font-weight: 400;
+   font-size: 12px;
+}
+
+
+[type=button], [type=reset], [type=submit], button {
+   -webkit-appearance: button;
+}
+
+
+[type=button], [type=reset], [type=submit], button {
+   -webkit-appearance: button;
+}
+button, select {
+   text-transform: none;
+}
+button, input, optgroup, select, textarea {
+   font-family: inherit;
+   font-size: 100%;
+   line-height: 1.15;
+   margin: 0;
+}
+button, input, optgroup, select, textarea {
+   font-family: inherit;
+}
+button {
+   padding: 0;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   border: 0;
+   border-radius: 3px;
+   background: 0 0;
+   line-height: 1;
+   cursor: auto;
+}
+button, select {
+   text-transform: none;
+}
+button, input, optgroup, select, textarea {
+   font-family: inherit;
+   font-size: 100%;
+   line-height: 1.15;
+   margin: 0;
+}
+button {
+   appearance: button;
+   -webkit-writing-mode: horizontal-tb !important;
+   text-rendering: auto;
+   color: -internal-light-dark(black, white);
+   letter-spacing: normal;
+   word-spacing: normal;
+   text-transform: none;
+   text-indent: 0px;
+   text-shadow: none;
+   display: inline-block;
+   text-align: center;
+   align-items: flex-start;
+   cursor: default;
+   background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+   box-sizing: border-box;
+   margin: 0em;
+   font: 400 13.3333px Arial;
+   padding: 1px 6px;
+   border-width: 2px;
+   border-style: outset;
+   border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+   border-image: initial;
+}
+
+[type=button], [type=reset], [type=submit], button {
+   -webkit-appearance: button;
+}
+
+
+[type=button], [type=reset], [type=submit], button {
+   -webkit-appearance: button;
+}
+button, select {
+   text-transform: none;
+}
+button, input {
+   overflow: visible;
+}
+button, input, optgroup, select, textarea {
+   font-family: inherit;
+   font-size: 100%;
+   line-height: 1.15;
+   margin: 0;
+}
+button, input, optgroup, select, textarea {
+   font-family: inherit;
+}
+button {
+   padding: 0;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   border: 0;
+   border-radius: 3px;
+   background: 0 0;
+   line-height: 1;
+   cursor: auto;
+}
+button, select {
+   text-transform: none;
+}
+button, input {
+   overflow: visible;
+}
+button, input, optgroup, select, textarea {
+   font-family: inherit;
+   font-size: 100%;
+   line-height: 1.15;
+   margin: 0;
+}
+
+
+button {
+   appearance: button;
+   -webkit-writing-mode: horizontal-tb !important;
+   text-rendering: auto;
+   color: -internal-light-dark(black, white);
+   letter-spacing: normal;
+   word-spacing: normal;
+   text-transform: none;
+   text-indent: 0px;
+   text-shadow: none;
+   display: inline-block;
+   text-align: center;
+   align-items: flex-start;
+   cursor: default;
+   background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+   box-sizing: border-box;
+   margin: 0em;
+   font: 400 13.3333px Arial;
+   padding: 1px 6px;
+   border-width: 2px;
+   border-style: outset;
+   border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+   border-image: initial;
+}
+
+
+
+
+
+element.style {
+   width: 100%;
+   display: inline-block;
+}
+
+element.style {
+   opacity: 1;
+   width: 4212px;
+   transform: translate3d(-468px, 0px, 0px);
+}
+
+
+.btn {
+   border: 2px solid #AC9C63;
+   font-family: NTF-Grand-Regular;
+   text-transform: uppercase;
+   text-decoration: none;
+   color: #fff;
+   white-space: nowrap;
+   display: inline-block;
+   font-size: 20px;
+   padding: 6px 24px 6px 24px;
+   letter-spacing: .025em;
+   transition: all .25s ease;
+}
+
+.cards{
+   
+   width: 25%;
+  display: inline-block;
+   background-color: black;
+   border-radius: 5px;
+   margin: 40px;
+   box-shadow: 2px 2px 10px black;
+   /*height: 560px;*/
+}
+.cards:hover{
+   box-shadow: 2px 2px 10px black;
+}
+
+.title{
+   text-align: center;
+   padding: 5px;
+   font-size: 15px;
+   overflow: auto;
+   grid-row: auto;
+}
+
+.team .team-item .social .fa{
+   height: 30px;
+   width: 30px;
+   line-height: 30px;
+   text-align: center;
+   color: #3498db;
+   background-color: #fff;
+}
+.team .team-item .social .fa:hover{
+   background-color: #222;
+   color: #fff;
+}
+.team .team-item .social {
+   height: 50px;
+   line-height: 50px;
+}
+section .container{
+   /* max-width: 1140px;*/
+    margin: auto;
+    position: relative;
+    min-height: 1px;
+ }
+ .wrapper{
+   width: 100%;
+   background: #dddddd;
+   min-height: 100vh;
+   overflow: hidden;
+
+}
+.section{
+   width: 90%;
+  /* background-color: red;*/
+}
+.heading {
+   text-align: center;
+   margin: 20px 0;
+}
+hr{
+   width: 100%;
+   height: 5px;
+   background-color: #000000;
+   margin: auto;
+   border: none;
+   margin-top: -10px;
+}
+.boxes{
+   position: relative;
+   width: 200px;
+   height: 200px;
+   transform-style: preserve-3d;
+   animation: animate 75s linear infinite;
+  
+}
+.boxes span{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: black;
+   height: 100%;
+   transform-origin: center;
+   transform-style: preserve-3d;
+   transform: rotate(calc(var(--i) * 45deg)) translateZ(300px);
+}
+.boxes span img{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+@keyframes animate{
+   0%{
+      transform: perspective(1000px) rotateX(0deg) rotateY(35deg);
+   }
+   100%{
+      transform: perspective(1000px) rotateX(360deg) rotateY(35deg);
+   }
+}
+ #sidebar {
+   float: left;
+   width: 100%;
+   background: #fff;
+   min-height: auto;
+   padding: 0;
+   box-shadow: 0 10px 20px -25px rgba(50,50,50,1);
+   border: solid #e1e1e1 1px;
+   margin-bottom: 25px;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+   display: block;
+}
+* {
+   font-family: 'Poppins', sans-serif;
+}
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+* {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+user agent stylesheet
+aside {
+   display: block;
+}
+body {
+   color: #999;
+   font-size: 15px;
+   font-family: 'Poppins', sans-serif;
+   line-height: 1.80857;
+}
+body {
+   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+   font-size: 14px;
+   line-height: 1.42857143;
+   color: #333;
+   background-color: #fff;
+}
+html {
+   font-size: 10px;
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html {
+   font-family: sans-serif;
+   -webkit-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+}
+:after, :before {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+:after, :before {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/* match fixture end*/
+
+
+/* meet our team */
+@media (max-width: 768px){}
+.team-holder {
+    float: left;
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 75px;
+}
+.team-holder {
+    float: left;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 75px;
+}
+* {
+    font-family: 'Poppins', sans-serif;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+body {
+    color: #999;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.80857;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* end of meet our team*/
+
+.fcard .row .col{
+   display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px; 
+    
+}
+
+
+.row{
+   
+   display: flex;
+   margin-top: 15px;
+   
+}
+
+section .fcard .row .card{
+   display: flex;
+}
+.parallax-container{
+   min-height: 280px;
+   height: auto;
+}
+
+
+ @media (min-width: 768px) {
+   .bd-placeholder-img-lg {
+     font-size: 3.5rem;
+   }
+ }
+
+@media print, screen and (min-width: 40em){}
+
+@media screen and (max-width: 639px){
+   .featured-slider-content {
+       margin-top: 24px;
+   }
+   }
+
+   @media screen and (max-width: 639px){}
+.part-featured-slider .slider-right .featured-slider-content {
+    order: 2;
+}
+@media screen and (max-width: 1023px){}
+.part-featured-slider .slider-right .featured-slider-content {
+    padding-right: 0;
+}
+.part-featured-slider .slider-right .featured-slider-content {
+    padding-right: 8.333%;
+}
+@media screen and (max-width: 639px){}
+.featured-slider-content {
+    margin-top: 24px;
+}
+@media print, screen and (min-width: 40em){
+
+}
+@media only screen and (max-width: 767px){}
+.home-page-wrapper .centers-nearby-wrapper .section-nearby .col-md-4 {
+    display: none;
+}
+.col{
+   max-width: 20px;
+   grid-gap: 10px; 
+   padding: 30px;
+}
+.welcome{
+   text-align: center;
+
+
+}
+.mess{
+   justify-content: center!important;
+   padding-top: 5px;
+   padding-right: 15px;
+   padding-bottom: 5px;
+   padding-left: 15px
+}
+.mess p{
+   padding: 0rem 1rem;
+   margin-bottom: 0;
+   background-color: rgba(233,236,239,0);
+}
+.mess h2 {
+   text-transform: uppercase!important;
+   font-size: 20px;
+   color: #6f4037;
+   padding-bottom: 5px;
+}
+.mess h3{
+   font-size: 15px;
+   padding-bottom: 10px;
+}
+.card{
+   position: relative;
+    margin: .5rem  1rem 0;
+    background-color: #fff;
+    -webkit-transition: -webkit-box-shadow .25s;
+    transition: -webkit-box-shadow .25s;
+    transition: box-shadow .25s;
+    transition: box-shadow .25s, -webkit-box-shadow .25s;
+    border-radius: 2px;
+    
+    /*height: 1rem;*/
+}
+
+
+
+img {
+   border-style: none;
+}
+img{
+     display: inline-block;
+    vertical-align: middle;
+    max-width: auto;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+}
+
+/* here*/
+
+.image-slider .slick-prev {
+   z-index: 99;
+   left: 0;
+   width: 30px;
+   height: 80px;
+   background-color: #AC9C63;
+   border-radius: 0;
+}
+.image-slider .slick-prev::before {
+   content: '\f104';
+   font-family: 'Font Awesome 5 Pro';
+   font-size: 50px;
+   font-weight: 100;
+}
+.slick-prev:before {
+   content: '←';
+}
+.slick-prev:before, .slick-next:before {
+   font-family: 'slick';
+   font-size: 20px;
+   line-height: 1;
+   opacity: .75;
+   color: white;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-slider .slick-track, .slick-slider .slick-list {
+   -webkit-transform: translate3d(0, 0, 0);
+   -moz-transform: translate3d(0, 0, 0);
+   -ms-transform: translate3d(0, 0, 0);
+   -o-transform: translate3d(0, 0, 0);
+   transform: translate3d(0, 0, 0);
+}
+a:-webkit-any-link {
+   color: -webkit-link;
+   cursor: pointer;
+   text-decoration: underline;
+}
+
+
+
+.part-featured-slider .slider-right .featured-slider-slider {
+    order: 1;
+}
+
+.fcard .row .col{
+   display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px; 
+    
+}
+.album.container.row.col{
+   width: 1rem 1rem;
+}
+.slider .indicators .indicator-item.active{
+   background-color: #6f4037;
+}
+.move{
+   margin-top: 60px;
+   text-align: justify;
+   margin-bottom: 20px;
+}
+section .fcard .row .card{
+   display: flex;
+}
+.parallax-container{
+   min-height: 280px;
+   height: auto;
+}
+.icon-sports{
+   color: #6f4037;
+}
+
+.item-content {
+   color: #fff;
+   padding: 24px 0 24px 0;
+}
+
+
+
+.container-fluid {
+   width: 100%;
+   padding-right: 15px;
+   padding-left: 15px;
+   margin-right: auto;
+   margin-left: auto;
+}
+
+.cardi{
+   margin-top: 50px; 
+   width: 100%;
+   padding :10px 10px;
+   overflow: auto; 
+}
+
+.main{
+  width: 100%;
+  
+}
+.image img {
+   width: 100%;
+   height: 150px;
+   margin-bottom: 2px;
+   border-radius: 50px;
+}
+.image img:hover{
+   box-shadow: 2px 2px 10px brown;
+   transition: 1ms;
+}
+
+.wrapper{
+   margin-top: 30px;
+   text-align: center;
+  
+}
+.wrapper h1{
+   font-family: 'yatra One' cursive;
+   font-size: 48px;
+   color: #fff;
+   margin-bottom: 25px;
+}
+.wrapper .our_team{
+   display: flex;
+   width: auto;
+   justify-content: center;
+   margin-bottom: 50px;
+  
+}
+.wrapper .our_team .team_member{
+   width: 250px;
+   margin: 5px;
+   background: #fff;
+   padding: 20px 10px;
+}
+r .wrappe.our_team .team_member .member_img{
+  background: #e9e5fa;
+   max-width: 199px;
+   width: 100%;
+   height: 199px;
+   margin: 0 auto;
+   padding: 5px;
+   cursor: pointer;
+   position: relative;
+   border-radius: 50%;
+}
+.wrapper .our_team .team_member .member_img img{
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+}
+.wrapper .our_team .team_member h3{
+   text-transform: uppercase;
+   font-size: 18px;
+   line-height: 18px;
+   letter-spacing: 2px;
+   margin: 15px 0 0;
+}
+.wrapper .our_team .team_member span{
+   font-size: 10px;
+   color: black;
+}
+
+.wrapper .our_team .team_member p{
+   color: black;
+   margin-top: 20px;
+   line-height: 20px;
+   
+}
+
+.team{
+   min-height: 100vh;
+   padding: 60px 15px;
+  
+   float: left;
+   width: 100%;
+}
+.team h1{
+   font-size: 36px;
+   font-family: open sans;
+   font-weight: 700;
+   color: #ffffff;
+   margin: 0;
+   padding-bottom: 60px;
+   text-align: center;
+}
+.team .card{
+   width: 25%;
+   float: left;
+   padding: 0px 15px;
+   cursor: pointer;
+   margin: 3px;
+   
+}
+.team .card .box{
+   padding: 15px;
+   background: #2d3035;
+   border-radius: 5px;
+   transition: margin 1s ease,box-shadow 1s ease;
+}
+.team .card .box:hover{
+   margin-top: 15px;
+   box-shadow: 0px 0px 40px black;
+}
+.team .card .box img{
+   width: 150px;
+   display: block;
+   margin: 10px auto;
+   border-radius: 50%;
+}
+.team .card .box h4{
+   font-size: 20px;
+   font-family: open sans-serif;
+   margin: 20px 0px 10px;
+   color: #ea5e71;
+   text-align: center;
+   font-weight: 700;
+
+}
+.team .card .box h2{
+   font-size: 16px;
+   font-family: sans-serif;
+   font-weight: 600px;
+   color: #b9b9b9;
+   margin: 0px 0px 15px;
+   text-align: center;
+}
+.team .card .box p{
+   color: #b9b9b9;
+   font-size: 15px;
+   font-family: open sans;
+   font-weight: 400;
+   text-align: center;
+   line-height: 24px;
+   padding: 0px 20px;
+}
+section{
+   padding: 10rem;
+   background-color: red;
+
+}
+.heading{
+   text-transform: uppercase;
+   font-size: 3.5rem;
+   letter-spacing: 3px;
+   margin-right: -3px;
+   margin-bottom: 5rem;
+   text-align: center;
+   color: chocolate;
+   position: relative;
+}
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+.box{
+   position: absolute;
+   top :50%;
+   left: 50%;
+   transform: translate(-50% ,-50%);
+   padding: 20px;
+   width: 100%;
+   box-sizing: border-box;
+   background-color:black;
+   border-radius: 4px;
+   box-shadow: 0 5px 15px rgba(0,0,0,.5);
+   display: flex;
+  
+}
+.box .imgbx{
+   width: 600px;
+   flex:.0.0.150px;
+   padding-left: 30px;
+}
+.box .imgbx img{
+   max-width:  500px;
+}
+.box .content{
+   padding-left: 20px;
+}
+
+.carousel-item img{
+   display: block;
+   width: 100%;
+   height: auto;
+
+}
+#owl-demo p{
+   background-color: red;
+}
+ end carousel 
+
+.carousel .carousel-inner .carousel-item img{
+   height: 400px;
+ 
+}
+#carouselExampleIndicators{
+   margin-top: 20rem
+}
+.slider-area{
+   padding-top: 50px 0;
+   background-color: #262626;
+   position: relative;
+   margin: 120px 0;
+}
+.carousel-control.left,
+.carousel-control.right{
+   background: transparent;
+}
+.img-area{
+   width: 100%;
+   height: 100%;
+   margin: auto;
+   border: 2px solid #fff;
+   border-radius: 50%;
+   overflow: hidden;
+}
+
+
+
+.banner-item{
+   position: relative;
+   height: 30vh;
+   background-position: center;
+   background-size: cover;
+   background: red
+}
+.banner-data img{
+   width: 100%;
+   height: 30%
+}
+.banner-data::before{
+   content: "";
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   background-color: green;
+   top: 0;
+   left: 0;
+}
+.banner-data{
+   position: absolute;
+   top: 50%;
+   transform: translate(-50%);
+   width: 100%;
+   height: auto;
+   text-align: center;
+}
+.banner-data h1{
+   color:#fff;
+   text-transform: uppercase;
+   font-size: 70px;
+   text-align: center;
+
+}
+.banner-data p{
+   color: #fff;
+   background-color: #3498db;
+   display: inline-block;
+   text-transform: uppercase;
+   letter-spacing: 4px;
+   padding: 0px 10px; 
+   text-align: center;
+   font-size: 20px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-one{
+   background: #6f4037;
+}
+.footer-two{
+   background: #462822;
+}
+
+.owl-controls .owl-buttons{
+   position: relative;
+}
+.owl-controls .owl-prev{
+   position: absolute;
+   left: -40;
+   bottom: 230px;
+   padding: 8px 17px;
+   background: #26ccca;
+   border-radius: 50px;
+   transition: .5s;
+}
+.owl-controls .owl-next{
+   position: absolute;
+   right: -40px;
+   bottom: 230px;
+   padding: 8px 17px;
+   background: #26ccca;
+   border-radius: 50px;
+   transition: .5s;
+}
+.owl-controls .owl-prev:after,.owl-controls .owl-next:after{
+   content: '\f104';
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: #fff;
+   font-size: 16px;
+}
+.owl-controls .owl-next:after{
+   content: '\f105';
+}
+.owl-controls .owl-prev:hover,.owl-controls .owl-next:hover{
+   background: #000;
+}
+
+.fslider{
+   margin-top: 0px;
+}
+
+.fcard .row .col{
+   display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px; 
+    
+}
+
+
+.row{
+   
+   display: flex;
+   margin-top: 15px;
+   
+}
+.col{
+   
+}
+
+section .fcard .row .card{
+   display: flex;
+}
+
+
+
+.box{
+   position: absolute;
+   top :50%;
+   left: 50%;
+   transform: translate(-50% ,-50%);
+   padding: 20px;
+   width: 100%;
+   box-sizing: border-box;
+   background-color:black;
+   border-radius: 4px;
+   box-shadow: 0 5px 15px rgba(0,0,0,.5);
+   display: flex;
+  
+}
+.box .imgbx{
+   width: 600px;
+   flex:.0.0.150px;
+   padding-left: 30px;
+}
+.box .imgbx img{
+   max-width:  500px;
+}
+.box .content{
+   padding-left: 20px;
+}
+.slidering{
+width: 100%;
+display: flex;
+}
+.slidering .card{
+   background: #fff;
+   flex: 1;
+   margin: 0 10px;
+}
+.slidering .card .img{
+   height: 200px;
+   width: 100%;
+}
+
+.slidering .card .img img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+}
+.slidering .card .content{
+   padding: 10px 20px;
+}
+.slidering .card .content .title{
+   font-size: 25px;
+   font-weight: 600;
+   color: #000;
+}
+.slidering .card .content .sub-title{
+font: 20px;
+font-weight: 600;
+color: #e74c3c;
+line-height: 20px;
+}
+.slidering .card .content p{
+   text-align: justify;
+   margin: 10px 0;
+}
+.slidering .card .content .btn{
+   display: block;
+   text-align: left;
+   margin: 10px 0;
+}
+.slidering .card .content .btn button{
+   background: #e74c3c;
+   color: #fff;
+   border: none;
+   outline: none;
+   font-size: 17px;
+   padding: 5px 8px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: 0.2s;
+}
+.slidering .card .content .btn button:hover{
+   /*transform: scale(0.9);*/
+   transition: 0.9;
+}
+</style>
+ 
+
+
+
+
+    <!--meet our team-->
+    <div class="team-holder theme-padding">
+        <div class="container">
+           <div class="main-heading-holder">
+              <div class="main-heading sytle-2">
+                 <h2>Meet Your Team</h2>
+                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium<br>doloremque laudantium, totam rem aperiam</p>
+              </div>
+           </div>
+           <div id="team-slider">
+              <div class="container">
+                 <div class="col-md-3">
+                    <div class="team-column style-2">
+                       <img src="images/img-1-1.jpg" alt="">
+                       <div class="player-name">
+                          <div class="desination-2">Defender</div>
+                          <h5>Charles Wheeler</h5>
+                          <span class="player-number">12</span>
+                       </div>
+                       <div class="overlay">
+                          <div class="team-detail-hover position-center-x">
+                             <p>Lacus vulputate torquent mollis venenatis quisque suspendisse fermentum primis,</p>
+                             <ul class="social-icons style-4 style-5">
+                                <li><a class="facebook" href="#" tabindex="0"><i class="fa fa-facebook"></i></a></li>
+                                <li><a class="twitter" href="#" tabindex="0"><i class="fa fa-twitter"></i></a></li>
+                                <li><a class="youtube" href="#" tabindex="0"><i class="fa fa-youtube-play"></i></a></li>
+                                <li><a class="pinterest" href="#" tabindex="0"><i class="fa fa-pinterest-p"></i></a></li>
+                             </ul>
+                             <a class="btn blue-btn" href=" /soccer/team-detail.html" tabindex="0">View Detail</a>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-md-3">
+                    <div class="team-column style-2">
+                       <img src="images/img-1-2.jpg" alt="">
+                       <div class="player-name">
+                          <div class="desination-2">Defender</div>
+                          <h5>Charles Wheeler</h5>
+                          <span class="player-number">12</span>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-md-3">
+                    <div class="team-column style-2">
+                       <img src="images/img-1-3.jpg" alt="">
+                       <div class="player-name">
+                          <div class="desination-2">Defender</div>
+                          <h5>Charles Wheeler</h5>
+                          <span class="player-number">12</span>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-md-3">
+                    <div class="team-column style-2">
+                       <img src="images/img-1-4.jpg" alt="">
+                       <div class="player-name">
+                          <div class="desination-2">Defender</div>
+                          <h5>Charles Wheeler</h5>
+                          <span class="player-number">12</span>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+
+
+
+     <div class="row contained section-intro">
+        <div class="small-12 medium-3 columns">
+           <h2>Sports Academy <strong>Featured Programs</strong></h2>
+        </div>
+           </div>
+      
+           <div class="rowr contained item-set">
+             {% for blog in post %}
+            <div class="small-12 medium-6 large-3  small-centered columns item">
+      <div class="item-set-item-wrapper">
+      <div class="item-img-cont">
+      <!--<a href="" class="cta">-->
+      <img src="{{ blog.img.url }}" alt="">
+      </a>
+      </div>
+      <small>Trainer/Coach : {{ blog.trainer }}</small><br>
+      <small>Date: {{ blog.published }}</small>
+      <div class="item-content">
+      <strong class="content-title">{{ blog.title }}</strong>
+      
+      <p>{{ blog.content |truncatewords:30}}</p>
+      <a href="" class="cta">Learn more <i class="fal fa-angle-right" aria-hidden="true"></i></a>
+      </div>
+      </div>
+      </div>
+      {% endfor %}
+      </div>
+    </div>
+
+
+
+        
+<div class="album py-5 bg">
+    <div class="container">
+      <h2 style="text-align: center;">Training news</h2>
+      <div class="row">
+          {% for item in post %}
+        <div class="col-md-3">
+          <div class="card mb-3 shadow-sm">
+            <img src="{{ item.img.url }}" width="100%" height="225" alt="">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <div class="card-body" style="height: 150px;">
+                 <h4 style="color: #0008; font-size: medium;">{{ item.title }}</h4>
+           
+              <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">{{ item.content |truncatewords:15}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <!--<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+       
+      </div>
+    </div>
+    </div>
+
+
+
+
+
+<main>
+    <div class="slider owl-carousel">
+     <div class="card">
+         <div class="img">
+             <img src="/static/img/arsenal1.jpg" alt="">
+         </div>
+             <div class="content">
+                 <div class="title">Briana Toazua</div>
+                 <div class="sub-title">Graphic Designer</div>
+                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus dignissimos optio et eos magni minima quisquam illo, odio aspernatur eum impedit vel? Magnam quaerat amet excepturi, fugiat fuga mollitia nihil?</p>
+                 <div class="btn">
+                     <button>Read More</button>
+                 </div>
+             </div>
+     </div>
+     
+     <div class="card">
+         <div class="img">
+             <img src="/static/img/arsenal2.jpg" alt="">
+         </div>
+             <div class="content">
+                 <div class="title">Briana Toazua</div>
+                 <div class="sub-title">Graphic Designer</div>
+                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus dignissimos optio et eos magni minima quisquam illo, odio aspernatur eum impedit vel? Magnam quaerat amet excepturi, fugiat fuga mollitia nihil?</p>
+                 <div class="btn">
+                     <button>Read More</button>
+                 </div>
+             </div> 
+     </div>
+     <div class="card">
+         <div class="img">
+             <img src="/static/img/arsenal2.jpg" alt="">
+         </div>
+             <div class="content">
+                 <div class="title">Briana Toazua</div>
+                 <div class="sub-title">Graphic Designer</div>
+                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus dignissimos optio et eos magni minima quisquam illo, odio aspernatur eum impedit vel? Magnam quaerat amet excepturi, fugiat fuga mollitia nihil?</p>
+                 <div class="btn">
+                     <button>Read More</button>
+                 </div>
+             </div> 
+     </div>
+     <div class="card">
+         <div class="img">
+             <img src="/static/img/arsenal2.jpg" alt="">
+         </div>
+             <div class="content">
+                 <div class="title">Briana Toazua</div>
+                 <div class="sub-title">Graphic Designer</div>
+                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus dignissimos optio et eos magni minima quisquam illo, odio aspernatur eum impedit vel? Magnam quaerat amet excepturi, fugiat fuga mollitia nihil?</p>
+                 <div class="btn">
+                     <button>Read More</button>
+                 </div>
+             </div> 
+     </div>
+ </div>
+ </main>
+ 
+      
+
+
+    <!-- Destinations -->
+
+	<div class="destinations" id="destinations">
+		<div class="containers">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_subtitle">simply amazing places</div>
+					<div class="section_title"><h2>Popular Destinations</h2></div>
+				</div>
+			</div>
+			<div class="row destinations_row">
+				<div class="col">
+					<div class="destinations_container item_grid">
+						{% for dest in posting %}
+
+						<!-- Destination -->
+						<div class="destination item">
+							<div class="destination_image">
+									<img style="height: 50vh; width: 420px;" src="{{dest.img.url}}" alt=""> 
+                                    <a style="color: red;" class="mr-2" href="">{{ dest.author }}</a>
+                                    <small class="text-muted">{{ dest.date_posted}}</small>
+									<!--<img src="{{baseUrl}}/{{dest.img}}" alt=""> -->      <!-- src="static/images/{{dest.img}}" alt=""> any of these two can work<-->
+								
+									 {% if dest.offer %}
+									<div class="spec_offer text-center"><a href="#">Special Offer</a></div>
+									{% endif%}
+								<!--can be removed <div class="spec_offer text-center"><a href="#">Special Offer</a></div>-->
+							</div>
+							<div class="destination_content">
+								<div class="destination_title"><a href="{% url 'detail' dest.id %}">{{dest.title}}</a></div>
+								<div class="destination_subtitle"><p>{{dest.content |truncatewords:20 }}</p></div>
+								<div class="destination_price">From $ {{dest.price}}</div>
+							</div>
+						</div>
+                       {% endfor%}     
+					
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+    
+
+    <!-- End of main site section-->
+<div class="row row-cols-1 row-cols-md-3">
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img src="/static/img/love.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img src="/static/img/logo3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a short card.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img src="/static/img/laptop.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img src="/static/img/home2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>  
+    <div class="container">
+        <div class="news-blog">   
+            <div class="training-info">
+                <h2>Football training </h2>
+                <p>Full-time professional coaching and matches led by our highly qualified</p>
+                <p>CAF coaches at the  first International Football Academy.</p>
+               </div>
+                <div class="owl-carousel owl-theme blog-post">
+                    <div class="blog-content" data-aos="fade-in" data-aos-delay="200">
+                        <img src="{% static 'img/pep1.' %}" alt="blog3">
+                        
+                        <div class="blog-title">
+                            
+                            <h3>Exceptional Talent Hunt !</h3>
+                            
+                            <div class="owl-nav">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam at perspiciatis omnis incidunt autem veniam quibusdam et, ipsa, expedita laborum quis est, impedit maiores illum. Tempore ducimus perferendis ad obcaecati!</p>
+                        </div>
+                        </div>
+                        <div class="owl-navigation">
+                            <span class="owl-nav-prev"><i class="fas fa-long-arrow-alt-left"></i></span>
+                            <span class="owl-nav-next"><i class="fas fa-long-arrow-alt-right"></i></span>
+                            </div> 
+                  </div>
+                </div>
+                                     
+       </div>
+
+       <div class="container">
+        <div class="pagination flex-row">
+            <a href="#"><i class="fas fa-chevron-left"></i></a>
+            <a href="#" class="page">1</a>
+            <a href="#" class="page">2</a>
+            <a href="#" class="page">3</a>
+            <a href="#" class="page">4</a>
+            <a href="#" class="page">5</a>
+            <a href="#"><i class="fas fa-chevron-right"></i></a>
+        </div>
+       </div>
+</section>
+
+
+
+<div class="row row-cols-1 row-cols-md-4">
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img src="/static/img/camera1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img src="/static/img/car.jpg" style="height: 500;" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a short card.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img src="/static/img/city.jpg" style="height: 500;" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+        <div class="card h-100">
+          <img src="/static/img/uni.jpg" style="height: 500;" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card h-100">
+          <img src="/static/img/united1.jpg" style="height: 500px;" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card h-100">
+          <img src="/static/img/staduim8.jpg" style="height: 573;" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+      </div>
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img src="" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <main>
+    <section>
+        <div class="blog">
+            <div class="container">
+                <h2>FOOTBALL</h2>
+                <p>
+                    Full-time professional coaching and matches led by our highly qualified UEFA coaches at the UK’s first International Football Academy</p>
+                <div class="owl-carousel owl-theme blog-post">
+                    <div class="blog-content">
+                        <img src="../static/img/li.jpg" alt="">
+                        <div class="blogtitle">
+                            <h3>Coming to America</h3>
+                            <button class="btn btn-blog">Fashion</button>
+                            <span>2 Minutes</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <img src="../static/img/li.jpg" alt="">
+                        <div class="blogtitle">
+                            <h3>Coming to America</h3>
+                            <button class="btn btn-blog">Fashion</button>
+                            <span>2 Minutes</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <img src="../static/img/li.jpg" alt="">
+                        <div class="blogtitle">
+                            <h3>Coming to America</h3>
+                            <button class="btn btn-blog">Fashion</button>
+                            <span>2 Minutes</span>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Carousel-->
+    </main>
+    <!--team news-->
+
+
+     
+  <section id="contant" class="contant">
+    <div class="container">
+       <div class="row">
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+           
+             <h4 style="text-align: center;">Match Fixtures around the world</h4>
+             <aside id="sidebar" class="left-bar">
+                <div class="feature-matchs">
+                   <div class="team-btw-match">
+                      <ul>
+                         <li>
+                            <img src="images/img-01_002.png" alt="">
+                            <span>Portugal</span>
+                         </li>
+                         <li class="vs"><span>vs</span></li>
+                         <li>
+                            <img src="images/img-02.png" alt="">
+                            <span>Germany</span>
+                         </li>
+                      </ul>
+                      <ul>
+                         <li>
+                            <img src="images/img-03_002.png" alt="">
+                            <span>Portugal</span>
+                         </li>
+                         <li class="vs"><span>vs</span></li>
+                         <li>
+                            <img src="images/img-04_003.png" alt="">
+                            <span>Germany</span>
+                         </li>
+                      </ul>
+                      <ul>
+                         <li>
+                            <img src="images/img-05_002.png" alt="">
+                            <span>Portugal</span>
+                         </li>
+                         <li class="vs"><span>vs</span></li>
+                         <li>
+                            <img src="images/img-06.png" alt="">
+                            <span>Germany</span>
+                         </li>
+                      </ul>
+                      <ul>
+                         <li>
+                            <img src="images/img-07_002.png" alt="">
+                            <span>Portugal</span>
+                         </li>
+                         <li class="vs"><span>vs</span></li>
+                         <li>
+                            <img src="images/img-08.png" alt="">
+                            <span>Germany</span>
+                         </li>
+                      </ul>
+                      <ul>
+                         <li>
+                            <img src="images/img-05_002.png" alt="">
+                            <span>Portugal</span>
+                         </li>
+                         <li class="vs"><span>vs</span></li>
+                         <li>
+                            <img src="images/img-06.png" alt="">
+                            <span>Germany</span>
+                         </li>
+                      </ul>
+                   </div>
+                </div>
+             </aside>
+             <h4>Points Table</h4>
+             <aside id="sidebar" class="left-bar">
+                <div class="feature-matchs">
+                   <table class="table table-bordered table-hover">
+                      <thead>
+                         <tr>
+                            <th>#</th>
+                            <th>Team</th>
+                            <th>P</th>
+                            <th>W</th>
+                            <th>L</th>
+                         </tr>
+                      </thead>
+                      <tbody>
+                         <tr>
+                            <td>1</td>
+                            <td><img src="images/img-01_004.png" alt="">Liverpool</td>
+                            <td>10</td>
+                            <td>12</td>
+                            <td>20</td>
+                         </tr>
+                         <tr>
+                            <td>2</td>
+                            <td><img src="images/img-02_002.png" alt="">Chelsea</td>
+                            <td>10</td>
+                            <td>12</td>
+                            <td>20</td>
+                         </tr>
+                         <tr>
+                            <td>3</td>
+                            <td><img src="images/img-03_003.png" alt="">Norwich City</td>
+                            <td>20</td>
+                            <td>15</td>
+                            <td>20</td>
+                         </tr>
+                         <tr>
+                            <td>4</td>
+                            <td><img src="images/img-04_002.png" alt="">West Brom</td>
+                            <td>60</td>
+                            <td>10</td>
+                            <td>60</td>
+                         </tr>
+                         <tr>
+                            <td>5</td>
+                            <td><img src="images/img-05.png" alt="">sunderland</td>
+                            <td>30</td>
+                            <td>06</td>
+                            <td>30</td>
+                         </tr>
+                         <tr>
+                            <td>1</td>
+                            <td><img src="images/img-01_004.png" alt="">Liverpool</td>
+                            <td>10</td>
+                            <td>12</td>
+                            <td>20</td>
+                         </tr>
+                      </tbody>
+                   </table>
+                </div>
+             </aside>
+ 
+          </div>
+          <div class="col-lg-8 col-sm-8 col-xs-12">
+             <div class="news-post-holder">
+                <div class="news-post-widget">
+                   <img class="img-responsive" src="/static/img/football.jpg" style="width: 50rem; height: 430px;" alt="">
+   
+                </div>
+             
+             </div>
+           
+          </div>
+       </div>
+    </div>
+ </section>
+<!--disabaled links-->
+    <section class="infomodal">
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <h4 id="info-modal-heading">Link disabled</h4>
+                <p id="info-modal-content">All links disabled as at now!</p>
+            </div>
+            <div class="modal-footer">
+                <a href="" class="modal-close waves-effects btn-flat">Close</a>
+            </div>
+        </div>
+    </section>
+ 
+    
+  
+    <div class="col-lg-8 col-sm-8 col-xs-12">
+      <div class="news-post-holder">
+         <div class="news-post-widget">
+            <img class="img-responsive" src="/static/img/football.jpg" style="width: 50rem; height: 430px;" alt="">
+
+         </div>
+      
+      </div>
+    
+   </div>
+</div>
+</div>
+</section>
+
+
+<div class="team-holder theme-padding">
+  <div class="container">
+     <div class="main-heading-holder">
+        <div class="main-heading sytle-2">
+           <h2>Meet Your Team</h2>
+           <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium<br>doloremque laudantium, totam rem aperiam</p>
+        </div>
+     </div>
+     <div id="team-slider">
+        <div class="container">
+           <div class="col-md-3">
+              <div class="team-column style-2">
+                 <img src="/static/img/mo.jpg" alt="">
+                 <div class="player-name">
+                    <div class="desination-2">Defender</div>
+                    <h5>Charles Wheeler</h5>
+                    <span class="player-number">12</span>
+                 </div>
+                 <div class="overlay">
+                    <div class="team-detail-hover position-center-x">
+                       <p>Lacus vulputate torquent mollis venenatis quisque suspendisse fermentum primis,</p>
+                       <ul class="social-icons style-4 style-5">
+                          <li><a class="facebook" href="#" tabindex="0"><i class="fa fa-facebook"></i></a></li>
+                          <li><a class="twitter" href="#" tabindex="0"><i class="fa fa-twitter"></i></a></li>
+                          <li><a class="youtube" href="#" tabindex="0"><i class="fa fa-youtube-play"></i></a></li>
+                          <li><a class="pinterest" href="#" tabindex="0"><i class="fa fa-pinterest-p"></i></a></li>
+                       </ul>
+                       <a class="btn blue-btn" href=" /soccer/team-detail.html" tabindex="0">View Detail</a>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           <div class="col-md-3">
+              <div class="team-column style-2">
+                 <img src="/static/img/rs.jpg" alt="">
+                 <div class="player-name">
+                    <div class="desination-2">Defender</div>
+                    <h5>Charles Wheeler</h5>
+                    <span class="player-number">12</span>
+                 </div>
+              </div>
+           </div>
+           <div class="col-md-3">
+              <div class="team-column style-2">
+                 <img src="/static/img/oi.jpg" alt="">
+                 <div class="player-name">
+                    <div class="desination-2">Defender</div>
+                    <h5>Charles Wheeler</h5>
+                    <span class="player-number">12</span>
+                 </div>
+              </div>
+           </div>
+           <div class="col-md-3">
+              <div class="team-column style-2">
+                 <img src="/static/img/mis1.jpg" alt="">
+                 <div class="player-name">
+                    <div class="desination-2">Defender</div>
+                    <h5>Charles Wheeler</h5>
+                    <span class="player-number">12</span>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
+  <!--end of first carousel-->
+
+
+  
+<!--second-->
+  <div id="myCarousel" class="mycarousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" 
+          class="active"></li>
+          <li data-target="myCarousel" data-slide-to="1"></li>
+
+      </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="container">
+                <h1>Example Headline</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, sint harum corrupti eum doloribus quos possimus quia optio minima assumenda!</p>
+                <a href="" class="btn btn-lg btn-primary">Sing Up</a>
+            </div>
+        </div>
+        <div class="carousel-item active">
+            <div class="container">
+                <h1>Example Headline</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, sint harum corrupti eum doloribus quos possimus quia optio minima assumenda!</p>
+                <a href="" class="btn btn-lg btn-primary">Sing Up</a>
+            </div>
+        </div>
+        <div class="carousel-item active">
+            <div class="container">
+                <h1>Example Headline</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, sint harum corrupti eum doloribus quos possimus quia optio minima assumenda!</p>
+                <a href="" class="btn btn-lg btn-primary">Sing Up</a>
+            </div>
+        </div>
+        <div class="carousel-item active">
+            <div class="container">
+                <h1>Example Headline</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, sint harum corrupti eum doloribus quos possimus quia optio minima assumenda!</p>
+                <a href="" class="btn btn-lg btn-primary">Sing Up</a>
+            </div>
+        </div>
+        <div class="carousel-item active">
+            <div class="container">
+                <h1>Example Headline</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, sint harum corrupti eum doloribus quos possimus quia optio minima assumenda!</p>
+                <a href="" class="btn btn-lg btn-primary">Sing Up</a>
+            </div>
+        </div>
+        <div class="carousel-item active">
+            <div class="container">
+                <h1>Example Headline</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, sint harum corrupti eum doloribus quos possimus quia optio minima assumenda!</p>
+                <a href="" class="btn btn-lg btn-primary">Sing Up</a>
+            </div>
+        </div>
+    </div>
+  </div>
+
+<main>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="news-slider" class="owl-carousel">
+                <div class="news-grid">
+                    <div class="news-grid-image">
+                        <img src="/static/img/arsenal1.jpg" alt="">
+                        <div class="news-grid-box">
+                            <h1>19</h1>
+                            <p>Sep</p>
+                        </div>
+                    </div>
+                    <div class="news-grid-txt">
+                        <span>Finance</span>
+                        <h2>Heading Will Be Here</h2>
+                        <ul>
+                            <li><i class="fa fa-calender" aria-hidden="true"></i>Sep 19,2020</li>
+                            <li><i class="fa fa-user" aria-hidden="true"></i>Admin</li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia quaerat modi nulla voluptatem eaque dolorem, placeat dolorum minima saepe explicabo molestiae deserunt alias suscipit laboriosam optio, eveniet a recusandae?</p>
+                        <a href="#">Read More ....</a>
+                    </div>
+                </div>
+                <div class="news-grid">
+                    <div class="news-grid-image">
+                        <img src="/static/img/arsenal1.jpg" alt="">
+                        <div class="news-grid-box">
+                            <h1>19</h1>
+                            <p>Sep</p>
+                        </div>
+                    </div>
+                    <div class="news-grid-txt">
+                        <span>Finance</span>
+                        <h2>Heading Will Be Here</h2>
+                        <ul>
+                            <li><i class="fa fa-calender" aria-hidden="true"></i>Sep 19,2020</li>
+                            <li><i class="fa fa-user" aria-hidden="true"></i>Admin</li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia quaerat modi nulla voluptatem eaque dolorem, placeat dolorum minima saepe explicabo molestiae deserunt alias suscipit laboriosam optio, eveniet a recusandae?</p>
+                        <a href="#">Read More ....</a>
+                    </div>
+                </div>
+                <div class="news-grid">
+                    <div class="news-grid-image">
+                        <img src="/static/img/arsenal1.jpg" alt="">
+                        <div class="news-grid-box">
+                            <h1>19</h1>
+                            <p>Sep</p>
+                        </div>
+                    </div>
+                    <div class="news-grid-txt">
+                        <span>Finance</span>
+                        <h2>Heading Will Be Here</h2>
+                        <ul>
+                            <li><i class="fa fa-calender" aria-hidden="true"></i>Sep 19,2020</li>
+                            <li><i class="fa fa-user" aria-hidden="true"></i>Admin</li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia quaerat modi nulla voluptatem eaque dolorem, placeat dolorum minima saepe explicabo molestiae deserunt alias suscipit laboriosam optio, eveniet a recusandae?</p>
+                        <a href="#">Read More ....</a>
+                    </div>
+                </div>
+                <div class="news-grid">
+                    <div class="news-grid-image">
+                        <img src="/static/img/arsenal1.jpg" alt="">
+                        <div class="news-grid-box">
+                            <h1>19</h1>
+                            <p>Sep</p>
+                        </div>
+                    </div>
+                    <div class="news-grid-txt">
+                        <span>Finance</span>
+                        <h2>Heading Will Be Here</h2>
+                        <ul>
+                            <li><i class="fa fa-calender" aria-hidden="true"></i>Sep 19,2020</li>
+                            <li><i class="fa fa-user" aria-hidden="true"></i>Admin</li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia quaerat modi nulla voluptatem eaque dolorem, placeat dolorum minima saepe explicabo molestiae deserunt alias suscipit laboriosam optio, eveniet a recusandae?</p>
+                        <a href="#">Read More ....</a>
+                    </div>
+                </div>
+               
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--carousel-->
+
+
+  
+    <!-- Blog Carousel-->
+    
+    <div class="container">
+      <!--Site Contents-->
+      <section class="container">           
+          <div class="site-content">
+              <div class="post owl-theme">
+                  {% for post in posts %}
+                  <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+                      <div class="post-image">
+                          
+                              <img src="{{ post.img.url}}" class="img" style="height: 480px; width: 100%;" alt="blog1">
+                          
+                               
+                              <!--<div class="post-info flex-row">
+                                  <span><i class="fas fa-user text-gray">&nbsp;&nbsp; Admin</i></span>
+                                  <span>&nbsp;&nbsp;<i class="fas fa-calendar-alt text-gray">&nbsp;&nbsp; January 14</i></span>
+                                  <span><i>2 comments</i></span>
+                              </div>-->
+                      </div>
+                              
+                      
+                              <div class="post-title">
+                                  <h2><a class="article-title" href="{% url 'detail' post.id %}">{{ post.title }}</a></h2>
+                                  <p class="article-content " >{{ post.content |truncatewords:15 }}</p>
+                                  <button class="btn post-btn"><a href="{% url 'detail' post.id %}">Read More &nbsp; <i class="fas fa-arrow-right"></i></a></button>
+                              </div>
+                              <div class="article-metadata">
+                                  <a class="mr-2" href="{% url 'posts' post.author.username %}">{{ post.author }} how to</a>
+                                  <small class="text-muted">{{ post.date_posted}}</small>
+                                </div>
+                                <div class="owl-navigation">
+                                  <span class="owl-nav-prev"><i class="fas fa-long-arrow-alt-left"></i></span>
+                                  <span class="owl-nav-next"><i class="fas fa-long-arrow-alt-right"></i></span>
+                                  </div> 
+                      </div>
+                      
+                      <hr>
+                      {% endfor %}
+                      
+                       <!-- page pagination from views.py-->
+          {% if is_paginated %} <!-- if paginated-->
+          
+          <!--previous page-->
+          {% if page_obj.has_previous %} 
+          <a class="btn btn-outline-info mb-4" href="?page=1">{{ page_obj.count }}</a>
+          <a class="btn btn-outline-info mb-4" href="?page={{ page.obj.previous_page_number }}">Previous</a>
+          
+          <div class="pagination flex-row">
+              <a href="#"><i class="fas fa-chevron-left"></i></a>
+              <a href="#" class="page">1</a>
+              
+              <a href="#"><i class="fas fa-chevron-right"></i></a>
+          </div>
+         
+          {% endif %}
+        
+          <!-- fetching all the pages within the paginator-->
+          {% for num in page_obj.paginator.page_range %}
+            {% if page_obj.number == num %} <!--if the current page is same as the index(num) in page range-->
+              <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a> 
+            {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}  <!--if current page is > current page,remove 3 ,and if it is < ,add 3 pages-->
+              <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+            {% endif %}
+          {% endfor %}
+        
+          
+          <!--next page-->
+          {% if page_obj.has_next %} 
+          <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+          <a class="btn btn-outline-info mb-4" href="?page={{ page.obj.paginator.num_pages }}">Last</a>
+          {% endif %}   
+        {% endif %}
+      
+        <!--check it tomorw-->
+
+        <div class="upcoming_event" data-aos="zoom-in" data-aos-delay="200">
+          <div class="event_info">
+              <h2 class="post-con" data-aos="zoom-out" data-aos-delay="200">UPCOMING EVENTS</h2>
+              <p>The following events are currently available to book online. You can also build your own short course. Click on any event to view full details and prices and for information on how to book securely online. You can also build your own short course to choose dates that suit you.</p>
+          </div>
+          {% for train in training %}
+          <div class="upcoming-image">
+              <div class="img">
+              
+                  <img src="{{ train.img.url }}" class="img" style="height: 180px; width: 280px;" alt="blog1">        
+              </div>
+              <div class="img_info">
+                  <h3>{{ train.title }}</h3>
+                  <p>{{ train.content }}</p>
+
+                  <h5>View Events</h5>
+                  <h4>{{ train.date_posted }}</h4>
+              </div>
+              </div>    
+              {% endfor %}     
+        </div>
+        
+         
+          
+           
+                         
+                  </div>
+                  <aside class="sidebar">
+                      <div class="category">
+                          <h2>Category</h2>
+                      </div>
+                     <ul class="category-list">
+                         <li class="list-items" data-aos="fade-left" data-aos-delay="100">
+                             <a href="#">Software</a>
+                             <span>(08)</span>
+                         </li>
+                         <li class="list-items" data-aos="fade-left" data-aos-delay="200">
+                          <a href="#">Technology</a>
+                          <span>(09)</span>
+                      </li>
+                      <li class="list-items" data-aos="fade-left" data-aos-delay="300">
+                          <a href="#">Lifestyle</a>
+                          <span>(15)</span>
+                      </li>
+                      <li class="list-items" data-aos="fade-left" data-aos-delay="400">
+                          <a href="#">Shopping</a>
+                          <span>(05)</span>
+                      </li>
+                      <li class="list-items" data-aos="fade-left" data-aos-delay="500">
+                          <a href="#">Food</a>
+                          <span>(25)</span>
+                      </li>
+                     </ul>
+                      <div class="popular-post">
+                          <h2>Popular Post</h2>
+                          <div class="post-content" data-aos="flip-up" data-aos-delay="200">
+                              <div class="post-image">
+                                  <div>
+                                      <img src="{% static 'img/cr.jpg' %}" class="img" alt="blog1">
+                                  </div>
+                                      
+                                      <div class="post-info flex-row">
+                                          <span><i class="fas fa-user text-gray">&nbsp;&nbsp; Admin</i></span>
+                                          <span>&nbsp;&nbsp;<i class="fas fa-calendar-alt text-gray">&nbsp;&nbsp; January 15</i></span>
+                                          <span><i>5 comments</i></span>
+                                      </div>
+                              </div>
+                                      
+                                      <div class="post-title">
+                                          <a href="#">New data recording system to better analysis</a>
+                                          <!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione et, vel, provident tempore cum molestias porro earum neque fuga blanditiis repellendus sit quasi reprehenderit, maiores cumque non ducimus fugit deleniti?</p>
+                                          <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>-->
+                                      </div>
+                                  
+                              </div>
+                              <!--<div class="post-content" data-aos="flip-up" data-aos-delay="300">
+                                  <div class="post-image">
+                                      <div>
+                                          <img src="{% static 'img/ms.jpg' %}" class="img" alt="blog1">
+                                      </div>
+                                          
+                                          <div class="post-info flex-row">
+                                              <span><i class="fas fa-user text-gray">&nbsp;&nbsp; Admin</i></span>
+                                              <span>&nbsp;&nbsp;<i class="fas fa-calendar-alt text-gray">&nbsp;&nbsp; January 15</i></span>
+                                              <span><i>5 comments</i></span>
+                                          </div>
+                                  </div>
+                                          
+                                          <div class="post-title">
+                                              <a href="#">New data recording system to better analysis</a>-->
+                                              <!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione et, vel, provident tempore cum molestias porro earum neque fuga blanditiis repellendus sit quasi reprehenderit, maiores cumque non ducimus fugit deleniti?</p>
+                                              <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>-->
+                                          <!--</div>
+                                      
+                                  </div>-->
+                                  <!--<div class="post-content" data-aos="flip-up" data-aos-delay="400">
+                                      <div class="post-image">
+                                          <div>
+                                              <img src="{% static 'img/co.jpg' %}" class="img" alt="blog1">
+                                          </div>
+                                              
+                                              <div class="post-info flex-row">
+                                                  <span><i class="fas fa-user text-gray">&nbsp;&nbsp; Admin</i></span>
+                                                  <span>&nbsp;&nbsp;<i class="fas fa-calendar-alt text-gray">&nbsp;&nbsp; January 15</i></span>
+                                                  <span><i>5 comments</i></span>
+                                              </div>
+                                      </div>
+                                              
+                                              <div class="post-title">
+                                                  <a href="#">New data recording system to better analysis</a>-->
+                                                  <!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione et, vel, provident tempore cum molestias porro earum neque fuga blanditiis repellendus sit quasi reprehenderit, maiores cumque non ducimus fugit deleniti?</p>-->
+                                                  <!--<button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>-->
+                                             <!-- </div>
+                                          
+                                      </div>
+     
+                                          <div class="post-content" data-aos="flip-up" data-aos-delay="500">
+                                              <div class="post-image">
+                                                  <div>
+                                                      <img src="{% static 'img/gb.jpg' %}" class="img" alt="blog1">
+                                                  </div>
+                                                      
+                                                      <div class="post-info flex-row">
+                                                          <span><i class="fas fa-user text-gray">&nbsp;&nbsp; Admin</i></span>
+                                                          <span>&nbsp;&nbsp;<i class="fas fa-calendar-alt text-gray">&nbsp;&nbsp; January 15</i></span>
+                                                          <span><i>5 comments</i></span>
+                                                      </div>
+                                              </div>
+                                                      
+                                                      <div class="post-title">
+                                                          <a href="#">New data recording system to better analysis</a>-->
+                                                          <!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione et, vel, provident tempore cum molestias porro earum neque fuga blanditiis repellendus sit quasi reprehenderit, maiores cumque non ducimus fugit deleniti?</p>-->
+                                                          <!--<button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>
+                                                      </div>
+                                                  
+                                              </div>
+                                              <div class="post-content" data-aos="flip-up" data-aos-delay="600">
+                                                  <div class="post-image">
+                                                      <div>
+                                                          <img src="{% static 'img/mb.jpg' %}" class="img" alt="blog1">
+                                                      </div>
+                                                          
+                                                          <div class="post-info flex-row">
+                                                              <span><i class="fas fa-user text-gray">&nbsp;&nbsp; Admin</i></span>
+                                                              <span>&nbsp;&nbsp;<i class="fas fa-calendar-alt text-gray">&nbsp;&nbsp; January 15</i></span>
+                                                              <span><i>5 comments</i></span>
+                                                          </div>
+                                                  </div>
+                                                          
+                                                          <div class="post-title">
+                                                              <a href="#">New data recording system to better analysis</a>-->
+                                                              <!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione et, vel, provident tempore cum molestias porro earum neque fuga blanditiis repellendus sit quasi reprehenderit, maiores cumque non ducimus fugit deleniti?</p>-->
+                                                              <!--<button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>-->
+                                                          <!--</div>
+                                                      
+                                                  </div>-->
+                      </div>
+                      <div class="newsletter" data-aos="fade-up" data-aos-delay="300">
+                          <h2>News Letter</h2>
+                          <div class="form-element">
+                              <input type="text" class="input-element" placeholder="Email">
+                              <button class="btn form-btn">Subscribe</button>
+                          </div>
+                      </div>
+                      <div class="popular-tags">
+                          <h2>Popular Tag</h2>
+                          <div class="tags flex-row">
+                              <span class="tag" data-aos="flip-up" data-aos-delay="100">Training</span>
+                              <span class="tag" data-aos="flip-up" data-aos-delay="200">Programs</span>
+                              <span class="tag" data-aos="flip-up" data-aos-delay="300">Design</span>
+                              <span class="tag" data-aos="flip-up" data-aos-delay="400">Technology</span>
+                              <span class="tag" data-aos="flip-up" data-aos-delay="500">Travel</span>
+                              <span class="tag" data-aos="flip-up" data-aos-delay="600">Lifestyle</span>
+                              <span class="tag" data-aos="flip-up" data-aos-delay="700">Software</span>
+                          </div>
+                      </div>
+                  </aside>
+              </div>     
+      </section>
+     
+     
+  </div>
+  
+
+<div class="slidering owl-carousel">
+  <div class="card">
+      <div class="img">
+          <img src="/static/img/ms.jpg" alt="">
+          <div class="content">
+              <div class="title">hamman hannusa</div>
+              <div class="sub-title">graphic designer</div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  rerum?</p>
+              <div class="btn">
+                  <button>read more</button>
+              </div>
+          </div>
+      </div>
+
+  </div>
+  <div class="card">
+      <div class="img">
+          <img src="/static/img/ms.jpg" alt="">
+          <div class="content">
+              <div class="title">hamman hannusa</div>
+              <div class="sub-title">graphic designer</div>
+              <p>Lorem ipsum dolorero odit beatae molestiae,  rerum?</p>
+              <div class="btn">
+                  <button>read more</button>
+              </div>
+          </div>
+      </div>
+
+  </div>
+
+  <div class="card">
+      <div class="img">
+          <img src="/static/img/ms.jpg" alt="">
+          <div class="content">
+              <div class="title">hamman hannusa</div>
+              <div class="sub-title">graphic designer</div>
+              <p>Lorem  officiis consectetur blanditiis, culpa doloribus optio atque distinctio rerum?</p>
+              <div class="btn">
+                  <button>read more</button>
+              </div>
+          </div>
+      </div>
+
+  </div>
+   <div class="card">
+      <div class="img">
+          <img src="/static/img/ms.jpg" alt="">
+          <div class="content">
+              <div class="title">hamman hannusa</div>
+              <div class="sub-title">graphic designer</div>
+              <p>Lorem ipsum dolor sit  doloribus optio atque distinctio rerum?</p>
+              <div class="btn">
+                  <button>read more</button>
+              </div>
+          </div>
+      </div>
+
+  </div>
+</div>
+
+<section class="footer">
+  <footer class="footer-one">
+      <div class="container">
+          <div class="row">
+              <div class="col l6 s12">
+                  <h4 class="white-text">Contact Us</h4>
+                  <p class="grey-text">ABC Water Tank ,New City , US</p>
+                  <p class="grey-text"> +2347899922344</p>
+               
+              </div>
+              <div class="col l6 s12">
+                  <h4 class="white-text">Social Media</h4>
+                  <ul>
+                      <li>
+                          <a href="#" class="grey-text"><Facebook/a></li>
+                          <a href="#" class="grey-text">Instagram</a></li>
+                          <a href="#" class="grey-text">Twitter</a></li>
+                          <a href="#" class="grey-text"><Whatsapp/a></li>
+                  </ul>
+              
+              </div>
+          </div>
+        
+      </div>
+      <div class="row footer-two">
+          <div class="col l6 s12">
+              <p class="white-text">&copy; SportsLight</p>
+              <!--<p class="grey-text"> +2347899922344</p>--> 
+          </div>
+          <div class="col l6 s12">
+              <h4 class="white-text">Designed By Nuel Team</h4>
+          </div>
+      </div>
+  </footer>
+</section>
+<section class="infomodal">
+  <div id="modal3" class="modal">
+      <div class="modal-content">
+          <h4 id="info-modal-heading">Link disabled</h4>
+          <p id="info-modal-content">All links disabled as at now!</p>
+      </div>
+      <div class="modal-footer">
+          <a href="" class="modal-close waves-effects btn-flat">Close</a>
+      </div>
+  </div>
+</section>
+
+<section class="footer">
+  <footer class="footer-one">
+      <div class="container">
+          <div class="row">
+              <div class="col l6 s12">
+                  <h4 class="white-text">Contact Us</h4>
+                  <p class="grey-text">ABC Water Tank ,New City , US</p>
+                  <p class="grey-text"> +2347899922344</p>
+               
+              </div>
+              <div class="col l6 s12">
+                  <h4 class="white-text">Social Media</h4>
+                  <ul>
+                      <li>
+                          <a href="#" class="grey-text"><Facebook/a></li>
+                          <a href="#" class="grey-text">Instagram</a></li>
+                          <a href="#" class="grey-text">Twitter</a></li>
+                          <a href="#" class="grey-text"><Whatsapp/a></li>
+                  </ul>
+              
+              </div>
+          </div>
+        
+      </div>

@@ -1,0 +1,85 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+ <!--font awsome-->
+ 
+<div class="contac">
+    <div class="content">
+        <h2>Contact Us</h2>
+        <p>developer.mozilla.org/en-US/docs/Web/API/Console/log
+              Difference between log() and dir() You might ask yourself what's the difference between console.dir() and console.log(). Another useful difference in Chrome exists </p>
+    </div>
+</div>
+
+
+<center>
+    <h1> Thanks {{ message_name }}</h1>
+    <p>Email recieved,will contact you soon</p>
+</center>
+<br><br><br>
+<section class="contact">
+   
+    <div class="container">
+        <div class="contactinfo">
+            <div class="box">
+                <div class="icon"><i class="fas fa-address-book"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>4471 Sugar camp Road,<br>Owatoma, Minnesota,<br>55080</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fas fa-envelope-square"></i></div>
+                        <div class="text">
+                            <h3>Email</h3>
+                          <p>sportweb@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fas fa-phone-square-alt"></i></div>
+                            <div class="text">
+                                <h3>Phone </h3>
+                              <p>+1235789905432</p>
+                            </div>
+                        </div>
+                      
+                  </div>   
+                 <div class="contactform">
+                     <form action="{% url 'info:contact' %}" method="POST"> 
+                         <h2>Send message Us A Message - {{ message_name }}</h2>
+                         {% csrf_token %}
+                         <div class="inputbox">
+                             <input type="text" name="message-name" required="required">
+                             <span>Full Name</span>
+                         </div>
+                         <div class="inputbox">
+                            <input type="text" name="message-phone" required="required">
+                            <span>Phone No:</span>
+                        </div>
+                         <div class="inputbox">
+                            <input type="email" name="message-email" required="required">
+                            <span>Email</span>
+                        </div>
+                        
+                        <div class="inputbox"> 
+                          <textarea name="message" id="" class="form-control mb-30" cols="30" rows="10" required></textarea>
+                            <span>Type Your Message ....</span>
+                        </div>
+                        <div class="button">
+                            <input type="submit" name="" value="send">
+                          
+                        </div>
+                     </form>
+                 </div> 
+        </div>
+</section>
+
+
+
+
+
+
+
+{% endblock %}

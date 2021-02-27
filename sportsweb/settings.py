@@ -23,9 +23,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'b9my3vph8iw_^0kys6xroti+%^&f%*c38y^m@h9p7h1n87qc7='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+
+
+
+ALLOWED_HOSTS = ['sportsweb.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -38,8 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
+    'phone_field'
     #'info'
 ]
+
+CRISPY_TEMPLATE_PACK ='bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -78,13 +85,12 @@ WSGI_APPLICATION = 'sportsweb.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'sportsweb',
+        'NAME': 'sportswebs',
         'USER' : 'postgres',
         'PASSWORD' :'admin',
         'HOST': 'localhost'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -131,3 +137,29 @@ STATIC_ROOT =os.path.join(BASE_DIR ,'assets')
 
 MEDIA_URL ='/media/'
 MEDIA_ROOT =os.path.join(BASE_DIR ,'media')
+
+# Email setting
+#if not DEBUG:
+
+    #EMAIL_HOST = 'smtp.gmail.com'
+   # EMAIL_HOST = 'smtp.gmail.com'
+   # EMAIL_HOST_USER ='nuel4xelence@gmail.com'
+   # EMAIL_HOST_PASSWORD  = 'sportsweb2020'
+   # EMAIL_PORT = 587
+   # EMAIL_USE_TLS = True
+   # EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
+#else:
+
+  #  EMAIL_BACKEND ='django.core.mail.backends.console.EmailBackend'
+
+
+    #EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER ='sportsweb101@gmail.com'
+EMAIL_HOST_PASSWORD  = 'sportsweb2020'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
+
+
+LOGIN_REDIRECT_URL = '/admin'

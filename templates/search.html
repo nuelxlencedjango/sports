@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}   
+{% block content %}
+
+<section style="margin-top: 70px;">
+    <h2 style="text-align: center;">Players Details</h2>
+    <div class="flex-container">
+        {% for player in reg %}
+        <a href="#">
+        <div class="card" style="width: 18rem; height: 30rem;">
+            <img src="{{ player.image.url }}" class="card-img-top" alt="...">
+            <div class="card-body" style="background: #fff;">
+              
+
+                <h5 style="text-align: right;">{{ player.first_name }}</h>
+             
+              <h5><a class="card-title" href="">{{ player.last_name }}</a></h5>
+              <p class="card-text">{{ player.address }} 
+              <p class="card-text">{{ player.phone }} 
+               
+                <p class="card-text">{{ player.position }} 
+                <p class="card-text">{{ player.email }}    
+                
+                 <!--<small>Trainer/Coach : {{ blog.trainer }}</small><br>-->
+            
+              <!--<a href="" class="cta">Learn more <i class="fal fa-angle-right" aria-hidden="true"></i></a>-->
+              <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+            </div>
+          </div>
+        </a>
+          {% endfor %}
+         </div>
+</section>
+
+{% endblock %}

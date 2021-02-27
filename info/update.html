@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<form action="POST" action="/updateData/{englilshleague.id}"></form>
+    <h4>Points Table 1</h4>
+    <aside id="sidebar" class="left-bar">
+       <div class="feature-matchs">
+          <table class="table table-bordered table-hover">
+             <thead>
+                <tr>
+                   <th>#</th>
+                   <th>Team</th>
+                   <th>P</th>
+                   <th>W</th>
+                   <th>D</th>
+                   <th>L</th>
+                   <th>P</th>
+                </tr>
+             </thead>
+             <tbody>
+
+                <tr>
+                   <td>1</td>
+                   <td><input type="text" name="id" value="{{englilshleague.id}}" readonly></td>
+                   <td><img src="images/img-01_004.png" alt="">Liverpool</td>
+                   <td>10</td>
+                   <td><input type="text" name="englishleague.played"></td>
+                   <td>8</td>
+                   <td>0</td>
+                   <td>2</td>
+                   <td>30</td>
+                   <td><a href="update.html">edit </a></td>
+                </tr>
+             </tbody>
+             
+          </table>
+          <input type="submit" value="update">
+        
+       </div>    </form>
+       <h1><a href="{% url 'home' %}">back to home page</a></h1>
+       {% if messages %}
+       {% for updated in messages %}
+       <h1 style="color: green;">{{ updated }}</h1>
+       {% endfor %}
+       {% endif %}
+    </aside>
+</body>
+</html>
+

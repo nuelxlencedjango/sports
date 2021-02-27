@@ -1,0 +1,103 @@
+
+
+<footer>
+    <div class="main-content">
+        <div class="left box">
+            <h2>about us</h2>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, magnam. Adipisci eum ullam minima. Omnis consequuntur praesentium cumque recusandae voluptatibus quia maiores, eligendi facilis doloremque iusto id ipsum fuga repellat.</p>
+                <div class="socials">
+                    <a href="#"><li><i class="fab fa-facebook-f"></i></li></a>
+                    <a href=""><li><i class="fab fa-twitter"></i></li></a>
+                    <a href=""><li><i class="fab fa-instagram"></i></li></a>
+                    <a href=""><li><i class="fab fa-pinterest"></i></li></a>
+            
+                </div>
+            </div>
+        </div>
+        <div class="center box">
+            <h2>address</h2>
+            <div class="content">
+                <div class="place">
+                    <span class="fas fa-map-marker-alt"></span>
+                    <span class="text">house road acenue ,kings ways huston ,United State</span>
+                </div>
+                <div class="phone">
+                    <span class="fas fa-phone-square-alt"></span>
+                    <span class="text">+23467889599583</span>
+                </div>
+                <div class="emails">
+                    <span class="fas fa-envelope-square"></span>
+                    <span class="text">nuel4@gmail.com</span>
+                </div>
+                <!--<div class="place">
+                    <span class="fab fa-map-marker-alt"></span>
+                    <span class="text">house road acenue ,kings ways huston ,United State</span>
+                </div>-->
+            </div>
+        </div>
+        <div class="center box">
+            <h2>services</h2>
+            <div class="content">
+                <div class="training">
+                    <span class="fas fa-futbol"></span>
+                    <span class="text">Training</span>
+                </div>
+                <div class="Mentaorship">
+                    <span class="fas fa-expand-arrows-alt"></span>
+                    <span class="text">Mentaorship</span>
+                       </div>
+                <div class="agency">
+                    <span class="far fa-futbol"></span>
+    
+                    <span class="text">footballer Agency</span>
+                </div>
+                <div class="scouting">
+                    <span class="fas fa-search-dollar"></span>
+                    <span class="text">Scouting</span>
+                </div>
+                <div class="management">
+                    <span class="far fa-handshake"></span>
+                    <span class="text">players management</span>
+                </div>
+                <div class="coaching">
+                    <span class="fas fa-user-secret"></span>
+                    <span class="text">coaching</span>
+                </div>
+                <div class="marketing">
+                    <span class="fas fa-comment-dollar"></span>
+                    <span class="text">Players Marketing</span>
+                </div>
+            </div>
+        </div>
+        <div class="right box">
+            <h2>contact us</h2>
+            <div class="content">
+                <form action="{% url 'info:contact' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="name">
+                        <div class="text">Name *</div>
+                        <input type="text" name="message-name" required>
+                    </div>
+                    <div class="name">
+                        <div class="text">Phone *</div>
+                        <input type="text" name="message-phone" required>
+                    </div>
+                    <div class="email">
+                        <div class="text">email *</div>
+                        <input type="email" name="message-email" required>
+                    </div>
+                    <div class="msg">
+                        <div class="text">message *</div>
+                        <textarea  cols="25" name="message" rows="2" required></textarea>
+                    </div>
+                    <div class="bt">
+                        <button type="submit">send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+
+

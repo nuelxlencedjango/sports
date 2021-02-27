@@ -1,0 +1,469 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ 
+     <!-- Compiled and minified CSS -->
+
+
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+ <!-- Compiled and minified CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+ <link rel="stylesheet" type="text/css"  href="{% static 'css_materialize/styling.css' %} ">
+   <!--<link type="text/css" rel="stylesheet" href="{% static 'css_materialize/materialize.css' %}"  media="screen,projection"/>-->
+    <title>base </title>
+</head>
+
+  <body>
+     <section class="fnavbar">
+      <nav class="nav-fixed">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">SportsLight</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+            <i class="material-icons">menu</i></a>
+          
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#" onclick="toggleModal();">Home</a></li>
+            <li><a href="#" onclick="toggleModal();">About Us</a></li>
+            <li><a href="#" onclick="toggleModal();">Training</a></li>
+            <li><a href="#" onclick="toggleModal();" >Matches</a></li>
+        
+            <li><a href="#" onclick="toggleModal();">Contact Us</a></li>
+            <li><a href="#" onclick="toggleModal();" >Services</a></li>
+          </ul>
+        </div>
+       <!--- <div class="nav-content">
+          <ul class="tabs tabs-transparent">
+            <li class="tab"><a href="#test1">Test 1</a></li>
+            <li class="tab"><a class="active" href="#test2">Test 2</a></li>
+            <li class="tab disabled"><a href="#test3">Disabled Tab</a></li>
+            <li class="tab"><a href="#test4">Test 4</a></li>
+          </ul>
+        </div>-->
+      </nav>
+    
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="#" onclick="toggleModal();">Home</a></li>
+            <li><a href="#" onclick="toggleModal();">About Us</a></li>
+            <li><a href="#" onclick="toggleModal();">Training</a></li>
+            <li><a href="#" onclick="toggleModal();" >Matches</a></li>
+        
+            <li><a href="#" onclick="toggleModal();">Contact Us</a></li>
+            <li><a href="#" onclick="toggleModal();" >Services</a></li>
+          </ul>
+
+     </section>
+
+     <!--slider section-->
+     <section class="fslider">
+       <div class="slider">
+         <ul class="slides">
+           <li>
+             <img src="{% static 'img/pep1.jpg' %}" alt="image one">
+             <div class="caption center-align white-text white-text">
+               <h3>Football made easy</h3>
+               <h5 class="light text-lighten-3">Get started today and secure your carrier</h5>
+             </div>
+           </li>
+           <li>
+            <img src="{% static 'img/pep2.jpg' %}" alt="image one">
+            <div class="caption center-align white-text white-text">
+              <h3>Think of better tomorrow ,think of SportsLight</h3>
+              <h5 class="light text-lighten-3">Best training academy in the world</h5>
+            </div>
+          </li>
+         </ul>
+       </div>
+     </section>
+   {% block content %}
+
+ {% endblock %}
+     <!--grid description-->
+     <section class="description">
+       <div class="section white center">
+         <h2 class="header">Our products our pride!</h2>
+         <div class="row container center">
+           
+           <div class="col center l4 s12">
+             <img src="{% static 'img/ny.jpeg' %}" style="object-fit: contain;" height="200" width="auto" alt="grid-image">
+           </div>
+           <div class="col center l8 s12 move">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum voluptates doloribus, odio sed itaque totam praesentium ipsam harum quo a porro molestiae quidem accusantium quis explicabo nostrum excepturi beatae aliquid maiores, ab ad unde? Quis asperiores tenetur veritatis corrupti sed quam, animi accusantium delectus odio. Provident assumenda dolor nihil sunt! </p>   
+              </div>
+              
+         </div>
+       </div>
+     </section>
+
+     <!--parallax-->
+     <section class="fparallax">
+      <div class="parallax-container">
+        <div class="parallax"><img src="{% static 'img/mis3.jpg' %}"></div>
+      </div>
+     </section>
+
+     <section class="fabout">
+       <div class="section white center">
+         <div class="row container">
+           <h2 class="header">About Us</h2>  
+         </div>
+           <p class="grey-text text-darken-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem non provident dolorum maxime cum, voluptatibus facilis dolores perspiciatis beatae repellat vero nam asperiores quaerat, molestiae veritatis inventore consequatur officiis quam rerum ut assumenda reiciendis. Pariatur corrupti exercitationem tenetur quod quis blanditiis perspiciatis eos dolor necessitatibus, sed id eaque commodi illo.
+           </p>
+           <a href="#" style="background: #6f4037 !important;" class="btn waves-effect waves-light">Read More</a>
+
+         
+       </div>
+     </section>
+        
+     <section class="fservices">
+       <div class="row" style="padding-left: 50px; padding-right: 50px;">
+        <div class="col s12 l4" style="padding: 50px;">
+          
+        </div>
+        <div class="col s12 l4" style="padding: 50px;"></div>
+
+        <div class="col s12 l4" style="padding: 50px;"></div>
+
+
+       </div>
+     </section>
+<!--link disable-->
+<!--<a href="#" onclick="toggleModal();">Click here</a>-->
+
+    <section class="infomodal">
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <h4 id="info-modal-heading">Link disabled</h4>
+                <p id="info-modal-content">All links disabled as at now!</p>
+            </div>
+            <div class="modal-footer">
+                <a href="" class="modal-close waves-effects btn-flat">Close</a>
+            </div>
+        </div>
+    </section>
+
+    <!--<nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo"><img  src="" alt="">logo</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">Home</a></li>
+            <li><a href="badges.html">About</a></li>
+            <li><a href="collapsible.html">Training</a></li>
+            <li><a href="collapsible.html">Maches</a></li>
+            <li><a href="collapsible.html">Join</a></li>
+           
+          </ul>
+        </div>
+      </nav>-->
+           
+
+
+
+ 
+     
+    
+    
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="{% static 'js_materialize/loader.js' %}"></script>
+</html>
+      
+
+
+
+<link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+ 
+<!-- Default Theme -->
+<link rel="stylesheet" href="owl-carousel/owl.theme.css">
+ 
+<!--  jQuery 1.7+  -->
+<script src="jquery-1.9.1.min.js"></script>
+ 
+<!-- Include js plugin -->
+<script src="assets/owl-carousel/owl.carousel.js"></script>
+
+<section class="fslider">
+    <div class="slider">
+      <ul class="slides">
+        <li>
+          <img src="{% static 'img/staduim7.jpg' %}" alt="image one">
+          <div class="caption center-align white-text white-text">
+            <h3>Football made easy</h3>
+            <h5 class="light text-lighten-3">Get started today and secure your carrier</h5>
+          </div>
+        </li>
+        <li>
+         <img src="{% static 'img/staduim8.jpg' %}" alt="image one">
+         <div class="caption center-align white-text white-text">
+           <h3>Think of better tomorrow ,think of SportsLight</h3>
+           <h5 class="light text-lighten-3">Best training academy in the world</h5>
+         </div>
+       </li>
+      </ul>
+    </div>
+  </section>
+
+<div id="owl-example" class="owl-carousel">
+<div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="{% static 'img/staduim7.jpg' %}" alt="image one">
+        <div class="caption center-align white-text white-text">
+          <h3>Football made easy</h3>
+          <h5 class="light text-lighten-3">Get started today and secure your carrier</h5>
+        </div>
+      </li>
+      <li>
+       <img src="{% static 'img/staduim8.jpg' %}" alt="image one">
+       <div class="caption center-align white-text white-text">
+         <h3>Think of better tomorrow ,think of SportsLight</h3>
+         <h5 class="light text-lighten-3">Best training academy in the world</h5>
+       </div>
+     </li>
+    </ul>
+  </div>
+</div>
+
+
+
+<div id="owl-demo" class="owl-carousel owl-theme">
+
+<div class="item"><img src="assets/fullimage1.jpg" alt="The Last of us"></div>
+<div class="item"><img src="assets/fullimage2.jpg" alt="GTA V"></div>
+<div class="item"><img src="assets/fullimage3.jpg" alt="Mirror Edge"></div>
+
+</div>
+<!--<div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/1"> <!-- random image -->
+        <!--<div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/2"> <!-- random image -->
+        <!--<div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/3"> <!-- random image -->
+        <!--<div class="caption right-align">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/4"> <!-- random image -->
+        <!--<div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>-->
+
+<!--reviews-->
+<!--<section class="freviews">
+<div class=" section white center">
+    <h3 class="header">Customers Reviews</h3>
+    <div class="carousel youreviews" style="margin-bottom: 30px;">
+        <a href="#" class="carousel-item">
+            <div class="card">
+                <div class="img">
+                    <img src="/static/img/arsenal1.jpg" alt="">
+                </div>
+                    <div class="content">
+                        <div class="title">Briana Toazua</div>
+                        <div class="sub-title">Graphic Designer</div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus dignissimos optio et eos magni minima quisquam illo, odio aspernatur eum impedit vel? Magnam quaerat amet excepturi, fugiat fuga mollitia nihil?</p>
+                        <div class="btn">
+                            <button>Read More</button>
+                        </div>
+                    </div>
+            </div>
+        </a>
+        <a href="#" class="carousel-item">
+            <div class="card">
+                <div class="img">
+                    <img src="/static/img/arsenal1.jpg" alt="">
+                </div>
+                    <div class="content">
+                        <div class="title">Briana Toazua</div>
+                        <div class="sub-title">Graphic Designer</div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus dignissimos optio et eos magni minima quisquam illo, odio aspernatur eum impedit vel? Magnam quaerat amet excepturi, fugiat fuga mollitia nihil?</p>
+                        <div class="btn">
+                            <button>Read More</button>
+                        </div>
+                    </div>
+            </div>
+        </a>
+        <a href="#" class="carousel-item">
+            <div class="card">
+                <div class="img">
+                    <img src="/static/img/arsenal1.jpg" alt="">
+                </div>
+                    <div class="content">
+                        <div class="title">Briana Toazua</div>
+                        <div class="sub-title">Graphic Designer</div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus dignissimos optio et eos magni minima quisquam illo, odio aspernatur eum impedit vel? Magnam quaerat amet excepturi, fugiat fuga mollitia nihil?</p>
+                        <div class="btn">
+                            <button>Read More</button>
+                        </div>
+                    </div>
+            </div>
+        </a>
+        <a href="#" class="carousel-item">
+            <div class="card">
+                <div class="img">
+                    <img src="/static/img/arsenal1.jpg" alt="">
+                </div>
+                    <div class="content">
+                        <div class="title">Briana Toazua</div>
+                        <div class="sub-title">Graphic Designer</div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus dignissimos optio et eos magni minima quisquam illo, odio aspernatur eum impedit vel? Magnam quaerat amet excepturi, fugiat fuga mollitia nihil?</p>
+                        <div class="btn">
+                            <button>Read More</button>
+                        </div>
+                    </div>
+            </div>
+        </a>
+        <a href="#" class="carousel-item">
+            <div class="card">
+                <div class="img">
+                    <img src="/static/img/arsenal1.jpg" alt="">
+                </div>
+                    <div class="content">
+                        <div class="title">Briana Toazua</div>
+                        <div class="sub-title">Graphic Designer</div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus dignissimos optio et eos magni minima quisquam illo, odio aspernatur eum impedit vel? Magnam quaerat amet excepturi, fugiat fuga mollitia nihil?</p>
+                        <div class="btn">
+                            <button>Read More</button>
+                        </div>
+                    </div>
+            </div>
+        </a>
+        <a href="#" class="carousel-item">
+            <div class="card">
+                <div class="img">
+                    <img src="/static/img/arsenal1.jpg" alt="">
+                </div>
+                    <div class="content">
+                        <div class="title">Briana Toazua</div>
+                        <div class="sub-title">Graphic Designer</div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus dignissimos optio et eos magni minima quisquam illo, odio aspernatur eum impedit vel? Magnam quaerat amet excepturi, fugiat fuga mollitia nihil?</p>
+                        <div class="btn">
+                            <button>Read More</button>
+                        </div>
+                    </div>
+            </div>
+        </a>
+        <a href="#" class="carousel-item">
+            <div class="card">
+                <div class="img">
+                    <img src="/static/img/arsenal1.jpg" alt="">
+                </div>
+                    <div class="content">
+                        <div class="title">Briana Toazua</div>
+                        <div class="sub-title">Graphic Designer</div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus dignissimos optio et eos magni minima quisquam illo, odio aspernatur eum impedit vel? Magnam quaerat amet excepturi, fugiat fuga mollitia nihil?</p>
+                        <div class="btn">
+                            <button>Read More</button>
+                        </div>
+                    </div>
+            </div>
+        </a>
+    </div>
+</div>
+</section>-->
+
+
+
+
+
+
+
+
+<!-- <div class="carousel">
+    <div class="card">
+        <div class="img">
+            <img src="/static/img/arsenal1.jpg" alt="">
+        </div>
+            <div class="content">
+                <div class="title">Briana Toazua</div>
+                <div class="sub-title">Graphic Designer</div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus dignissimos optio et eos magni minima quisquam illo, odio aspernatur eum impedit vel? Magnam quaerat amet excepturi, fugiat fuga mollitia nihil?</p>
+                <div class="btn">
+                    <button>Read More</button>
+                </div>
+            </div>
+    </div>
+    
+    <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/250/250/nature/1"></a>
+    <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/250/250/nature/2"></a>
+    <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/250/250/nature/3"></a>
+    <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
+    <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
+  </div>-->
+
+
+<!--<div class="carousel carousel-slider center">
+    <div class="carousel-fixed-item center">
+      <a class="btn waves-effect white grey-text darken-text-2">button</a>
+    </div>
+    <div class="carousel-item red white-text" href="#one!">
+      <h2>First Panel</h2>
+      
+      <p class="white-text">This is your first panel</p>
+      <div class="img">
+        <img src="/static/img/arsenal1.jpg" alt="">
+    </div>
+     
+    </div>
+    <div class="carousel-item amber white-text" href="#two!">
+      <h2>Second Panel</h2>
+      <p class="white-text">This is your second panel</p>
+      <div class="img">
+        <img src="/static/img/arsenal1.jpg" alt="">
+    </div>
+     
+      
+    </div>
+    <div class="carousel-item green white-text" href="#three!">
+      <h2>Third Panel</h2>
+      <p class="white-text">This is your third panel</p>
+      <div class="img">
+        <img src="/static/img/arsenal1.jpg" alt="">
+    </div>
+     
+    </div>
+    <div class="carousel-item blue white-text" href="#four!">
+      <h2>Fourth Panel</h2>
+      <p class="white-text">This is your fourth panel</p>
+    </div>
+    <div class="card">
+        <div class="img">
+            <img src="/static/img/arsenal1.jpg" alt="">
+        </div>
+            <div class="content">
+                <div class="title">Briana Toazua</div>
+                <div class="sub-title">Graphic Designer</div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus dignissimos optio et eos magni minima quisquam illo, odio aspernatur eum impedit vel? Magnam quaerat amet excepturi, fugiat fuga mollitia nihil?</p>
+                <div class="btn">
+                    <button>Read More</button>
+                </div>
+            </div>
+    </div>
+  </div>-->
+
+ <!--carousel css-->
+

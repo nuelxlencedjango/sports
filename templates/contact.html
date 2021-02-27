@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>welcome</h2>
+    <div class="owl-carous owl-them blog-pos">
+    {% for item in posting %}
+    
+        <div class="blogcontent">
+            <img src="{{ item.img.url }}" alt=" newsPix">
+            <div class="blogtitle">
+                <h3>{{ item.title }}</h3>
+                <div>
+                    <p>{{ item.content }}</p>
+                    goood
+                </div>
+               <!--- <button class="btn btn-blog">Fashion</button>-->
+                <span>2 Minutes</span>
+            </div>
+        </div>  
+        {% endfor %}
+    </div>
+  
+</div>

@@ -98,12 +98,15 @@ p{
 main .post-content{
     width: 100%;
     margin-bottom: 5rem;
+    
+    
 }
 main .site-content .post-content > .post-image, .post-title{
     padding: 1rem 2rem;
     position: relative;
 
 }
+
 main .site-content .post-content > .post-image .post-info{
     background: var(--sky);
     padding: 1rem;
@@ -115,29 +118,41 @@ main .site-content .post-content > .post-image .post-info{
 }
 main .site-content .post-content >.post-image > div{
     overflow: hidden;
+    display: flex;
 
 }
 
 main .site-content .post-content > .post-image .img{
     width: 100%;
     transition: 1s ease;
+    
+    
 }
-
+.post-content{
+    margin-top: 30px;
+}
 main .site-content .post-content > .post-image .img:hover{
     transform: scale(1.3);
 
 }
 main .site-content .post-content > .post-image .post-info span{
     margin: 0 .5rem;
+    
 
 }
 main .post-content .post-title a{
     font-family: var(--SemiBold);
     font-size: 1.5rem;
+    color: var(--sky);
+    margin-top: 10px;
+}
+section .site-content .post .article-metadata{
+    margin-left: 30px;
+    color: black;
 }
 .site-content .post-content .post-title .post-btn{
-    border-radius: 0;
-    padding: .7rem 1.5rem;
+    border-radius: 50px;
+    padding: .5rem 1.5rem;
     background: var(--sky);
 }
 .site-content .pagination{
@@ -231,7 +246,7 @@ main .post-content .post-title a{
 }
 .nav .nav-items .nav-link{
     padding: 1.6rem 1rem;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     position: relative;
     font-family: var(--midnight);
 
@@ -258,6 +273,91 @@ main .post-content .post-title a{
 }
 .nav .social i:hover{
     color: #a1c;
+}
+/*destinations*/
+.destinations_container
+{
+	width: calc(100% + 30px);
+    left: -15px;
+    display: flex;
+}
+.destination
+{
+	width: calc(100% / 3);
+	padding-left: 15px;
+	padding-right: 15px;
+    margin-bottom: 33px;
+    
+    
+}
+.destination_content
+{
+
+}
+.destination_title
+{
+	margin-top: 15px;
+}
+.destination_title a
+{
+	font-family: 'Oswald', sans-serif;
+	font-size: 30px;
+	font-weight: 400;
+	color: #181818;
+}
+.destination_subtitle
+{
+	margin-top: -4px;
+}
+.destination_price
+{
+	font-size: 16px;
+	font-weight: 700;
+	color: #181818;
+	margin-top: 16px;
+}
+
+/*mission*/
+.mission-info{
+    background: black;
+    height: 150px;;
+}
+.mission-info h2{
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: x-large;
+    margin: 2rem;
+    padding: 20px;
+}
+.mission-info p{
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    padding: 0px;
+}
+.mission-img{
+    display: flex;
+    height: 300px;
+    width: 280px;
+}
+.mission-img img{
+    height: 250px;
+    width: 280px;
+}
+/* about page*/
+.two-column-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.profile-img-wrapper img{
+    width: 100%;
+}
+.profile-content-warpper{
+    padding: 30px;
+}
+.profile-content-warpper h1{
+    color: lightseagreen;
 }
 /*main content */
 
@@ -286,38 +386,89 @@ main .site-title .btn:hover{
     border: 1rem solid var(--white);
     color: wheat;
 }
-main .blog{
-    /*background: url('../img/college.jpg');*/
-    background-repeat:no-repeat;
+.bloger{
+    /*background: url('../img/college.jpg');
+    background-repeat:no-repeat; */
     background-position: right;
-    height: 100vh;
-    width: 100%;
+  
+    height: 50vh;
+    width: 420px;
+    padding: 30px;
+    margin-top: 30px;
+   background-color: red;
+   display: flex;
     background-size: 65%;
+    margin-left: 30px;
 }
-
-main .blog .blog-post{
-    padding-top: 6rem;
-    height: 250px; 
-}
-main .blog-post .blog-content{
+.postinfos{
     display: flex;
+}
+.bloger .container{
+   
+    height: 100%;
+    
+ }
+
+ .blogcontent{
+    /*display: flex;*/
     flex-direction: column;
     text-align: center;
-    width: 80%;
-    height: 180px;
-    margin: 3rem 2rem;
+    width: 380px;
+    height: 200px;
+    margin: 2rem 2rem;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
 }
+.blogtitle{
+    color: black;
+    font-size: 35px;
+}
+
+.sidebar .feature-matchs .update{
+    cursor: pointer;
+    background-color: red;
+}
+
+section .site-content .upcoming_event .event_info{
+    color: red;
+    font: var(--SemiBold);
+}
+/*.img{
+    display: flex;
+}*/
+section .site-content .upcoming_event .event_info p{
+    margin-top: 0px;
+    color: black;
+    font: var(--ExtraLight);
+    font-size: 20px;;
+    
+}
+.news-blog h2{
+    color: white;
+    text-align: center;
+    font: var(--text-light);
+    font-size: 3rem;
+    
+}
+.training-info p{
+    color: white;
+    text-align: center;
+    font: var(--text-light);
+    font-size: 1.5rem;
+}
 main .blog-content .blog-title{
-    padding: 2rem 0;
+    padding: .3rem 0;
+}
+main .blog-title p{
+    color: red;
+    font-optical-sizing: 4px;
 }
 main .blog-content .btn-blog{
-    padding: 7rem 2rem;
-    background: var(--sky);
-    margin: 5rem;
+    padding: .5rem 2rem;
+    background: red;
+    margin: 2rem; /* .5 same line with the above item*/
 
 }
-main .block-content span{
+main .blog-content span{
     display: block;
 }
 
@@ -326,7 +477,7 @@ section .container .owl-nav{
     top:0%;
     margin: 0 auth;
     width: 100%;
-    height: 200px;
+    height: 100px;
 }
 .owl-nav .owl-prev .owl-nav-prev ,
 .owl-nav .owl-next .owl-nav-next{
@@ -348,6 +499,9 @@ main .site-content{
 }
 main .post-content{
     margin-bottom: 5rem;
+}
+section .news-blog {
+    background: black;
 }
 /* x main content x*/
 

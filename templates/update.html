@@ -1,0 +1,521 @@
+{% extends 'base.html' %}
+{% load static %}   
+{% block content %}
+
+
+
+    <center class="updatecolor">
+       
+       <h2>Table Update </h2>
+       {% if display.league|lower == "england" %}
+
+       <h3>{{ display.league }}</h3>
+
+       <form action="{% url 'info:updateEng' display.id %}" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+         <aside id="sidebar" class="left-bar">
+            <div class="feature-matchs">
+               <table class="table table-bordered table-hover">
+                  <thead>
+                     <tr>
+                        <th>#</th>
+                        <th class="club">Team</th>
+                        <th class="p">P</th>
+                        <th class="w">W</th>
+                        <th class="d">D</th>
+                        <th class="l">L</th>
+                        <th class="gf">GF</th>
+                        <th class="ga">GA</th>
+                   
+                        <th class="pts">pts</th>
+                      
+                     </tr>
+                  </thead>
+                  <tbody>
+             
+                     <tr>
+                        <td> {{ display.id }}</td>
+
+                        <div class="team_name">
+                        <td><input class="team_name" autocomplete="off" type="text" id ="name" name="team_name" value='{{ display.team_name }}' readonly></td>
+                        </div>
+
+                       <div class="match_played">
+                        <td><input class="pp" type="text" autocomplete="off" id="played" name="played" value="{{ display.played }}"></td>
+                       </div>
+
+                       <div class="win">
+                          <td><input class="ww" type="text" name="win" value="{{ display.win }}"></td>
+                       </div>
+
+                       <div class="draw">
+                        <td><input class="dd" type="text" name="draw" value="{{ display.draw }}"></td>
+                     </div>
+
+                     <div class="lost">
+                        <td><input class="ll" type="text" name="lost" value="{{ display.lost }}"></td>
+                     </div>
+
+                     <div class="goalf">
+                        <td><input class="gff" type="text" name="goalf" value="{{ display.goalf }}"></td>
+                     </div>
+
+                     <div class="goala">
+                        <td><input class="gaa" type="text" name="goala" value="{{ display.goala }}"></td>
+                     </div>
+                     
+                     <div class="point">
+                    <td><input type="number" class="pts" name="point" id="point" value="{{ display.point }}"></td>
+                     </div>
+                   
+                     </tr>
+            
+                  </tbody>
+                  
+               </table>
+            </div>
+      
+         <button type="submit" class="save btn btn-default" style="background-color: #AC9C63;;">english</button> 
+        
+         </aside>
+         
+       </form>
+
+       
+       {% elif display.league|lower == "spain" %}
+
+       <h3>{{ display.league }}</h3>
+
+       <form action="{% url 'info:updateSpa' display.id %}" method="POST" enctype="multipart/form-data">
+         {% csrf_token %}
+        <aside id="sidebar" class="left-bar">
+           <div class="feature-matchs">
+              <table class="table table-bordered table-hover">
+               <thead>
+                  <tr>
+                     <th>#</th>
+                     <th class="club">Team</th>
+                     <th class="p">P</th>
+                     <th class="w">W</th>
+                     <th class="d">D</th>
+                     <th class="l">L</th>
+                     <th class="gf">GF</th>
+                     <th class="ga">GA</th>
+                
+                     <th class="pts">pts</th>
+                  </tr>
+               </thead>
+                 
+                 <tbody>
+            
+                    <tr>
+   
+                     <td> {{ display.id }}</td>
+                       <div class="team_name">
+                       <td><input class="team_name" autocomplete="off" type="text" id ="name" name="team_name" value='{{ display.team_name }}' readonly></td>
+                       </div>
+                      <div class="match_played">
+                       <td><input class="pp" type="text" autocomplete="off" id="played" name="played" value="{{ display.played }}"></td>
+                      </div>
+                      <div class="win">
+                       
+                         <td><input class="ww" type="text" name="win" value="{{ display.win }}"></td>
+                      </div>
+                      <div class="draw">
+                       <td><input class="dd" type="text" name="draw" value="{{ display.draw }}"></td>
+                    </div>
+                    <div class="lost">
+                       <td><input class="ll" type="text" name="lost" value="{{ display.lost }}"></td>
+                    </div>
+                    <div class="goalf">
+                       <td><input class="gff" type="text" name="goalf" value="{{ display.goalf }}"></td>
+                    </div>
+                    <div class="goala">
+                       <td><input class="gaa" type="text" name="goala" value="{{ display.goala }}"></td>
+                    </div>
+                    <div class="point">
+                   <td><input type="number" class="pts" name="pts" id="point" value="{{ display.point }}"></td><br>
+                    </div>
+
+            
+              
+                    </tr>
+           
+                 </tbody>
+                 
+              </table>
+           </div>
+     
+           <button type="submit" class="save btn btn-default" style="background-color: #AC9C63;;">spain</button> 
+
+        </aside>
+        
+      </form>
+      
+     
+     
+   
+       {% elif display.league|lower == "germany" %}
+
+       <h3>{{ display.league }}</h3>
+
+       <form action="{% url 'info:updateGer' display.id %}" method="POST" enctype="multipart/form-data">
+         {% csrf_token %}
+        <aside id="sidebar" class="left-bar">
+           <div class="feature-matchs">
+              <table class="table table-bordered table-hover">
+               <thead>
+                  <tr>
+                     <th>#</th>
+                     <th class="club">Team</th>
+                     <th class="p">P</th>
+                     <th class="w">W</th>
+                     <th class="d">D</th>
+                     <th class="l">L</th>
+                     <th class="gf">GF</th>
+                     <th class="ga">GA</th>
+                
+                     <th class="pts">pts</th>
+                  </tr>
+               </thead>
+                 <tbody>
+            
+                    <tr>
+                       <td> {{ display.id }}</td>
+
+          
+                       <div class="team_name">
+                  
+                       <td><input class="team_name" autocomplete="off" type="text" id ="name" name="team_name" value='{{ display.team_name }}' readonly></td>
+                       </div>
+                      <div class="match_played">
+                       <td><input class="pp" type="text" autocomplete="off" id="played" name="played" value="{{ display.played }}"></td>
+                      </div>
+                      <div class="win">
+                       
+                         <td><input class="ww" type="text" name="win" value="{{ display.win }}"></td>
+                      </div>
+                      <div class="draw">
+                       <td><input class="dd" type="text" name="draw" value="{{ display.draw }}"></td>
+                    </div>
+                    <div class="lost">
+                       <td><input class="ll" type="text" name="lost" value="{{ display.lost }}"></td>
+                    </div>
+                    <div class="goalf">
+                       <td><input class="gff" type="text" name="goalf" value="{{ display.goalf }}"></td>
+                    </div>
+                    <div class="goala">
+                       <td><input class="gaa" type="text" name="goala" value="{{ display.goala }}"></td>
+                    </div>
+                    <div class="point">
+                     <td><input type="text" class="pts" name="pts" id="point" value="{{ display.point }}"></td><br>
+                      </div>
+        
+                    </tr>
+           
+                 </tbody>
+                 
+              </table>
+           </div>
+     
+           <button type="submit" class="save btn btn-default" style="background-color: #AC9C63;;">germany</button> 
+    
+        </aside>
+        
+      </form>
+
+
+
+      {% elif display.league|lower == "italy" %}
+
+      <h3>{{ display.league }}</h3>
+      <form action="{% url 'info:updateIta' display.id %}" method="POST" enctype="multipart/form-data">
+         {% csrf_token %}
+        <aside id="sidebar" class="left-bar">
+           <div class="feature-matchs">
+              <table class="table table-bordered table-hover">
+                 <thead>
+                    <tr>
+                       <th>#</th>
+                       <th class="club">Team</th>
+                       <th class="p">P</th>
+                       <th class="w">W</th>
+                       <th class="d">D</th>
+                       <th class="l">L</th>
+                       <th class="gf">GF</th>
+                       <th class="ga">GA</th>
+                       <th class="pts">pts</th>
+                    
+                    </tr>
+                 </thead>
+                 <tbody>
+            
+                    <tr>
+                       <td> {{ display.id }}</td>
+
+                       <div class="team_name">
+                    
+                       <td><input class="team_name" autocomplete="off" type="text" id ="name" name="team_name" value='{{ display.team_name }}' readonly></td>
+                       </div>
+                      <div class="match_played">
+                       <td><input class="pp" type="text" autocomplete="off" id="played" name="played" value="{{ display.played }}"></td>
+                      </div>
+                      <div class="win">
+                       
+                         <td><input class="ww" type="text" name="win" value="{{ display.win }}"></td>
+                      </div>
+                      <div class="draw">
+                       <td><input class="dd" type="text" name="draw" value="{{ display.draw }}"></td>
+                    </div>
+                    <div class="lost">
+                       <td><input class="ll" type="text" name="lost" value="{{ display.lost }}"></td>
+                    </div>
+                    <div class="goalf">
+                       <td><input class="gff" type="text" name="goalf" value="{{ display.goalf }}"></td>
+                    </div>
+                    <div class="goala">
+                       <td><input class="gaa" type="text" name="goala" value="{{ display.goala }}"></td>
+                    </div>
+                    <div class="point">
+                   <td><input type="text" class="pts" name="pts" id="point" value="{{ display.point }}"></td><br>
+
+                    </div>
+                  
+                    </tr>
+           
+                 </tbody>
+                 
+              </table>
+           </div>
+     
+           <button type="submit" class="save btn btn-default" style="background-color: #AC9C63;;">italy</button> 
+      
+        </aside>
+        
+      </form>
+
+
+      {% elif display.league|lower == "nigeria" %}
+
+      <h3>{{ display.league }}</h3>
+      <form action="{% url 'info:updateNig' display.id %}" method="POST" enctype="multipart/form-data">
+         {% csrf_token %}
+        <aside id="sidebar" class="left-bar">
+           <div class="feature-matchs">
+              <table class="table table-bordered table-hover">
+                 <thead>
+                    <tr>
+                       <th>#</th>
+                       <th class="club">Team</th>
+                       <th class="p">P</th>
+                       <th class="w">W</th>
+                       <th class="d">D</th>
+                       <th class="l">L</th>
+                       <th class="gf">GF</th>
+                       <th class="ga">GA</th>
+                       <th class="pts">pts</th>
+                    
+                    </tr>
+                 </thead>
+                 <tbody>
+            
+                    <tr>
+                       <td> {{ display.id }}</td>
+
+                       <div class="team_name">
+                    
+                       <td><input class="team_name" autocomplete="off" type="text" id ="name" name="team_name" value='{{ display.team_name }}' readonly></td>
+                       </div>
+                      <div class="match_played">
+                       <td><input class="pp" type="text" autocomplete="off" id="played" name="played" value="{{ display.played }}"></td>
+                      </div>
+                      <div class="win">
+                       
+                         <td><input class="ww" type="text" name="win" value="{{ display.win }}"></td>
+                      </div>
+                      <div class="draw">
+                       <td><input class="dd" type="text" name="draw" value="{{ display.draw }}"></td>
+                    </div>
+                    <div class="lost">
+                       <td><input class="ll" type="text" name="lost" value="{{ display.lost }}"></td>
+                    </div>
+                    <div class="goalf">
+                       <td><input class="gff" type="text" name="goalf" value="{{ display.goalf }}"></td>
+                    </div>
+                    <div class="goala">
+                       <td><input class="gaa" type="text" name="goala" value="{{ display.goala }}"></td>
+                    </div>
+                    <div class="point">
+                   <td><input type="text" class="pts" name="pts" id="point" value="{{ display.point }}"></td><br>
+
+                    </div>
+                  
+                    </tr>
+           
+                 </tbody>
+                 
+              </table>
+           </div>
+     
+           <button type="submit" class="save btn btn-default" style="background-color: #AC9C63;;">italy</button> 
+      
+        </aside>
+        
+      </form>
+     {% elif display.league|lower == "france" %}
+
+     <h3>{{ display.league }}</h3>
+
+     <form action="{% url 'info:updateFre' display.id %}" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+     <aside id="sidebar" class="left-bar">
+        <div class="feature-matchs">
+           <table class="table table-bordered table-hover">
+              <thead>
+                 <tr>
+                    <th>#</th>
+                    <th class="club">Team</th>
+                    <th class="p">P</th>
+                    <th class="w">W</th>
+                    <th class="d">D</th>
+                    <th class="l">L</th>
+                    <th class="gf">GF</th>
+                    <th class="ga">GA</th>
+                    <th class="pts">pts</th>
+                
+                 </tr>
+              </thead>
+              <tbody>
+         
+                 <tr>
+                    <td> {{ display.id }}</td>
+
+                    <div class="team_name">
+                 
+                    <td><input class="team_name" autocomplete="off" type="text" id ="name" name="team_name" value="{{ display.team_name }}" readonly></td>
+                    </div>
+                   <div class="match_played">
+                    <td><input class="pp" type="text" autocomplete="off" id="played" name="played" value="{{ display.played }}"></td>
+                   </div>
+                   <div class="win">
+                    
+                      <td><input class="ww" type="text" name="win" value="{{ display.win }}"></td>
+                   </div>
+                   <div class="draw">
+                    <td><input class="dd" type="text" name="draw" value="{{ display.draw }}"></td>
+                 </div>
+                 <div class="lost">
+                    <td><input class="ll" type="text" name="lost" value="{{ display.lost }}"></td>
+                 </div>
+                 <div class="goalf">
+                    <td><input class="gff" type="text" name="goalf" value="{{ display.goalf }}"></td>
+                 </div>
+                 <div class="goala">
+                    <td><input class="gaa" type="text" name="goala" value="{{ display.goala }}"></td>
+                 </div>
+                 <div class="point">
+                <td><input type="text" class="pts" name="pts" id="point" value="{{ display.point }}"></td><br>
+
+                 </div>
+             
+                 </tr>
+        
+              </tbody>
+              
+           </table>
+        </div>
+  
+        <button type="submit" class="save btn btn-default" style="background-color: #AC9C63;;">france</button> 
+     </aside>
+   </form>
+
+   {% else %}
+
+       <h3>{{ display.league }}</h3>
+   <form action="{% url 'info:updateTuk' display.id %}" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+     <aside id="sidebar" class="left-bar">
+        <div class="feature-matchs">
+           <table class="table table-bordered table-hover">
+              <thead>
+                 <tr>
+                    <th>#</th>
+                    <th class="club">Team</th>
+                    <th class="p">P</th>
+                    <th class="w">W</th>
+                    <th class="d">D</th>
+                    <th class="l">L</th>
+                    <th class="gf">GF</th>
+                    <th class="ga">GA</th>
+                    <th class="pts">pts</th>
+                
+                 </tr>
+              </thead>
+              <tbody>
+         
+                 <tr>
+                    <td> {{ display.id }}</td>
+
+                    <div class="team_name">
+               
+                    <td><input class="team_name" autocomplete="off" type="text" id ="name" name="team_name" value="{{ display.team_name }}" readonly></td>
+                    </div>
+                   <div class="match_played">
+                    <td><input class="pp" type="text" autocomplete="off" id="played" name="played" value="{{ display.played }}"></td>
+                   </div>
+                   <div class="win">
+                    
+                      <td><input class="ww" type="text" name="win" value="{{ display.win }}"></td>
+                   </div>
+                   <div class="draw">
+                    <td><input class="dd" type="text" name="draw" value="{{ display.draw }}"></td>
+                 </div>
+                 <div class="lost">
+                    <td><input class="ll" type="text" name="lost" value="{{ display.lost }}"></td>
+                 </div>
+                 <div class="goalf">
+                    <td><input class="gff" type="text" name="goalf" value="{{ display.goalf }}"></td>
+                 </div>
+                 <div class="goala">
+                    <td><input class="gaa" type="text" name="goala" value="{{ display.goala }}"></td>
+                 </div>
+                 <div class="point">
+                <td><input type="text" class="pts" name="pts" id="point" value="{{ display.point }}"></td><br>
+
+                 </div>
+              
+                 </tr>
+        
+              </tbody>
+              
+           </table>
+        </div>
+  
+        <button type="submit" class="save btn btn-default" style="background-color: #AC9C63;;">Turkey</button> 
+     </aside>
+   </form>
+    {% endif %}
+
+
+   <!--error message--> 
+
+    {% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %} 
+           <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+           </div>
+        {% endfor %}
+    {% endfor %}
+ {% endif %}
+
+ <h2>Table Update </h2>
+
+      
+
+</center>
+
+
+    {% endblock %}
+
+   

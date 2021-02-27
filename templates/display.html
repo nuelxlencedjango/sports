@@ -1,0 +1,38 @@
+<div class="container" align="center">
+<table border="1">
+<thead>
+    <tr>
+        <th>team id </th>
+        <th>team name </th>
+        <th>played </th>
+        <th>win </th>
+        <th>draw </th>
+        <th>lost</th>
+        <th>goal f</th>
+        <th>goal a </th>
+        <th>point</th>
+        <th>total point</th>
+    </tr>
+
+   
+    {% for show in italian %}
+    <tr>
+
+        <td>{{ show.id }}</td>
+        <td>{{ show.team_name}}</td>
+        <td>{{ show.played }}</td>
+        <td>{{ show.win}}</td>
+        <td>{{ show.draw}}</td>
+        <td>{{ show.lost}}</td>
+        <td>{{ show.goalf}}</td>
+        <td>{{ show.goala}}</td>
+        <td>{{ show.point}}</td>
+        <td>{{ show.total_point}}</td>
+       <td> <a href="{% url 'firstapp:update_data' show.id %}" class="btn btn-success">Update</a></td>
+   
+        <td> <a href="{% url 'firstapp:delete' show.id %}" class="btn btn-success">delete</a></td>
+    </tr>
+    {% endfor %}
+</thead>
+</table>
+</div>

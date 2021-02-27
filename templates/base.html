@@ -1,132 +1,266 @@
-
 {% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blogger web</title>
-  <!--Font Awesome icons-->
-  <link rel="stylesheet" type="text/css" href="{% static 'css/all.css' %}">
-  <!--Owl Carousel-->
-  <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.min.css' %}">
-  <link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.default.min.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>base</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+ <!--materialize-->
+ 
 
-   <!--AOS Animation-->
-   <link rel="stylesheet" type="text/css" href="{% static 'css/aos.css' %}">
-  <!--Normal or custom css-->
-  <link rel="stylesheet" type="text/css"  href="{% static 'style/style.css' %} ">
+ 
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <!-- Compiled and minified CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+ 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+ <!--custom css-->
+  <link rel="stylesheet" type="text/css"  href="{% static 'css_materialize/styling.css' %} ">
 
 </head>
 <body>
-<nav class="nav">
-        <div class="nav-menu flex-row">
-            <div class="nav-brand">
-                <a href="#" class="text-gray">SportsWeb</a>
-            </div>
-            <div class="toggle-collapse">
-                <div class="toggle-icons">
-                    <i class="fas fa-bars">
-
-                    </i>
-                </div>
-            </div>
-            <div>
-                <ul class="nav-items">
-                    <li class="nav-link">
-                        <a href="{% url 'home' %}">Home</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="{% url 'about' %}">About Us</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="{% url 'mission' %}">Mission</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="{% url 'training' %}">Training</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="{% url 'registration' %}">Registration</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="{% url 'contact' %}">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="social text-gray">
-                <a href="#"><i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#"><i class="fab fa-instagram-square"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-
-        </div>
-    </nav> 
     
+
+    <section class="fnavbar">
+        <nav class="nav-fixed">
+          <div class="nav-wrapper">
+            <a href="{% url 'info:home' %}" class="brand-logo">SportsLight</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+              <i class="material-icons">menu</i></a>
+             
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="{% url 'info:home' %}" onclick="toggleModal();">Home</a></li>
+              <li><a href="{% url 'info:about' %}" onclick="toggleModal();">About Us</a></li>
+              <li><a href="{% url 'info:training' %}" onclick="toggleModal();">Image Galary</a></li>
+              <li><a href="{% url 'info:matches' %}" onclick="toggleModal();" >Matches</a></li>
+          
+              <li><a href="{% url 'info:contact' %}" onclick="toggleModal();">Contact Us</a></li>
+              <li><a href="{% url 'info:services' %}" onclick="toggleModal();" >Services</a></li>
+
+
+              <!--<li><a href="{% url 'info:registration' %}" onclick="toggleModal();" >Player's Info</a></li>-->
+              {% if user.is_authenticated %}
+              <li><a href="{% url 'info:players_info' %}" onclick="toggleModal();" > Players Info</a></li>
+              {% else %}
+              <li><a href="{% url 'info:registration' %}" onclick="toggleModal();" >Register</a></li>
+              {% endif %}
+            </ul>
+          </div>
+        </nav>
+      
+        <ul class="sidenav" id="mobile-demo">
+          <li><a href="{% url 'info:home' %}" onclick="toggleModal();">Home</a></li>
+              <li><a href="{% url 'info:about' %}" onclick="toggleModal();">About Us</a></li>
+              <li><a href="{% url 'info:training' %}" onclick="toggleModal();">Image Galary</a></li>
+              <li><a href="{% url 'info:matches' %}" onclick="toggleModal();" >Matches</a></li>
+          
+              <li><a href="{% url 'info:contact' %}" onclick="toggleModal();">Contact Us</a></li>
+              <li><a href="{% url 'info:contact' %}" onclick="toggleModal();" >Services</a></li>
+           
+
+              {% if user.is_authenticated %}
+              <li><a href="{% url 'info:players_info' %}" onclick="toggleModal();" > Players Info</a></li>
+              {% else %}
+              <li><a href="{% url 'info:registration' %}" onclick="toggleModal();" >Register</a></li>
+              {% endif %}
+            </ul>
+           
+       </section>
+    
+
+       
+
+     
+ <!--slider section-->
+ <section class="fslider">
+    <div class="slider">
+      <ul class="slides">
+        <li>
+          <img src="{% static 'img/staduim7.jpg' %}" alt="image one">
+          <div class="caption center-align white-text white-text">
+            <h3>Football made easy</h3>
+            <h5 class="light text-lighten-3">Get started today and secure your carrier</h5>
+          </div>
+        </li>
+        <li>
+         <img src="{% static 'img/staduim8.jpg' %}" alt="image one">
+         <div class="caption center-align white-text white-text">
+           <h3>Think of better tomorrow ,think of SportsLight</h3>
+           <h5 class="light text-lighten-3">Best training academy in the world</h5>
+         </div>
+       </li>
+      </ul>
+    </div>
+  </section>
+
+
 {% block content %}
+{% endblock content %}
 
-{% endblock %}
+<!--<section class="description">
+       <div class="section white center">
+         <h2 class="header">Our products our pride!</h2>
+         <div class="row container center">
+           
+           <div class="col center l4 s12">
+             <img src="{% static 'img/ny.jpeg' %}" style="object-fit: contain;" height="200" width="auto" alt="grid-image">
+           </div>
+           <div class="col center l8 s12 move">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum voluptates doloribus, odio sed itaque totam praesentium ipsam harum quo a porro molestiae quidem accusantium quis explicabo nostrum excepturi beatae aliquid maiores, ab ad unde? Quis asperiores tenetur veritatis corrupti sed quam, animi accusantium delectus odio. Provident assumenda dolor nihil sunt! </p>   
+              </div>
+              
+         </div>
+       </div>
+     </section>-->
 
-<footer class="footer">
-    <div class="container">
-    <div class="about-us" data-aos="fade-right" data-aos-delay="200">
-        <h2>About us</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ducimus delectus explicabo tempore odio fugiat possimus saepe sint repudiandae iusto!</p>
-    </div>
-    <div class="newsletter" data-aos="fade-right" data-aos-delay="300">
-        <h2>Newsletter</h2>
-        <p>Stay updated with our latest</p>
-        <div class="form-element">
-            <input type="text" placeholder="Email"><span><i class="fas fa-chevron-right"></i></span>
+     <!--parallax-->
+     <section class="fparallax">
+        <div class="parallax-container">
+          <div class="parallax"><img src="{% static 'img/mis3.jpg' %}">
+        <p>hello</p></div>
+        </div>
+       </section>
+
+
+     <!--<section class="fabout">
+        <div class="section white center">
+          <div class="row container">
+            <h2 class="header">About Us</h2>  
+          </div>
+            <p class="grey-text text-darken-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem non provident dolorum maxime cum, voluptatibus facilis dolores perspiciatis beatae repellat vero nam asperiores quaerat, molestiae veritatis inventore consequatur officiis quam rerum ut assumenda reiciendis. Pariatur corrupti exercitationem tenetur quod quis blanditiis perspiciatis eos dolor necessitatibus, sed id eaque commodi illo.
+            </p>
+            <a href="#" style="background: #6f4037 !important;" class="btn waves-effect waves-light">Read More</a>
+ 
+          
+        </div>
+      </section>-->
+
+       
+     <section class="fservices">
+        <div class="row" style="padding-left: 50px; padding-right: 50px;">
+         <div class="col s12 l4 center" style="padding: 50px;">
+             <i class="large material-icons icon-coffee">local_dining</i>
+             <h5 class="header">Variety Of Sports </h5>
+         </div>
+         <div class="col s12 l4 center" style="padding: 50px;">
+        <i class="large material-icons icon-coffee">watch_later</i>
+        <h5 class="header">Variety Of Sports </h5>
+        </div>
+ 
+         <div class="col s12 l4 center" style="padding: 50px;">
+        <i class="large material-icons icon-coffee">favorites</i>
+        <h5 class="header">Variety Of Sports </h5>
+        </div>
+        </div>
+      </section>
+
+<!--reviews-->
+<section class="freviews">
+    <div class=" section white center">
+        <h3 class="header">Customers Reviews</h3>
+        <div class="carousel myreviews" style="margin-bottom: 30px;">
+            <a href="#" class="carousel-item">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card-panel teal" style="background-color: #6f4037 !important;">
+                            <span class="white-text">One Review</span>
+                            <p class="white-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui quasi debitis itaque, molestias, suscipit, aspernatur perferendis dignissimos necessitatibus sed corporis in! Exercitationem voluptatibus facere esse illum facilis quia repudiandae minus!</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="carousel-item">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card-panel teal" style="background-color: #6f4037 !important;">
+                            <span class="white-text">Three Review</span>
+                            <p class="white-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui quasi debitis itaque, molestias, suscipit, aspernatur perferendis dignissimos necessitatibus sed corporis in! Exercitationem voluptatibus facere esse illum facilis quia repudiandae minus!</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="carousel-item">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card-panel teal" style="background-color: #6f4037 !important;">
+                            <span class="white-text">Four Review</span>
+                            <p class="white-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui quasi debitis itaque, molestias, suscipit, aspernatur perferendis dignissimos necessitatibus sed corporis in! Exercitationem voluptatibus facere esse illum facilis quia repudiandae minus!</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="carousel-item">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card-panel teal" style="background-color: #6f4037 !important;">
+                            <span class="white-text">Five Review</span>
+                            <p class="white-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui quasi debitis itaque, molestias, suscipit, aspernatur perferendis dignissimos necessitatibus sed corporis in! Exercitationem voluptatibus facere esse illum facilis quia repudiandae minus!</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="carousel-item">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card-panel teal" style="background-color: #6f4037 !important;">
+                            <span class="white-text">six Review</span>
+                            <p class="white-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui quasi debitis itaque, molestias, suscipit, aspernatur perferendis dignissimos necessitatibus sed corporis in! Exercitationem voluptatibus facere esse illum facilis quia repudiandae minus!</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="carousel-item">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card-panel teal" style="background-color: #6f4037 !important;">
+                            <span class="white-text">One Review</span>
+                            <p class="white-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui quasi debitis itaque, molestias, suscipit, aspernatur perferendis dignissimos necessitatibus sed corporis in! Exercitationem voluptatibus facere esse illum facilis quia repudiandae minus!</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="carousel-item">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card-panel teal" style="background-color: #6f4037 !important;">
+                            <span class="white-text">One Review</span>
+                            <p class="white-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui quasi debitis itaque, molestias, suscipit, aspernatur perferendis dignissimos necessitatibus sed corporis in! Exercitationem voluptatibus facere esse illum facilis quia repudiandae minus!</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
         </div>
     </div>
-    <div class="instagram" data-aos="fade-right" data-aos-delay="400">
-        <h2>Instagram</h2>
-        <div class="flex-row">
-            <img src="{% static 'img/flower1.jpg' %}" alt="">
-            <img src="{% static 'img/flowers2.jpg' %}" alt="">
-            <img src="{% static 'img/coding1.jpg' %}" alt="">
-            <img src="{% static 'img/love.jpg' %}" alt="">
-        </div>
-       <!-- <div class="flex-row">
-            <img src="{% static 'img/city.jpg' %}" alt="">
-            <img src="{% static 'img/prog.jpg' %}" alt="">
-            <img src="{% static 'img/teaching.jpg' %}" alt="">
-            <img src="{% static 'img/girl.jpg' %}" alt="">
-        </div>-->
-    </div>
-    <div class="follow" data-aos="fade-right" data-aos-delay="500">
-        <h2>Follow Us</h2>
-        <p>Let us be social</p>
-        <div>
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-youtube"></i>
-        </div>
-    </div>
-   
-</div>
-<div class="rights flex-row">
-    <h3 class="text-gray">
-        Copyright @2020 All right reserved | made by
-        <a href="www.nuelonline.com" target="black">NuelTech</a>
-    </h3>
-</div>
-<div class="move-up">
-    <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
-</div>
-</footer>
+</section>
 
 
-<!--Jquery library file-->
-<script src="{% static 'jss/jquery3.5.1.min.js' %}"></script>
 
-<!--Owl Carousel js-->
-<script src="{% static 'jss/owl.carousel.min.js' %}"></script>
- <!--AOS js Animation-->
- <script src="{% static 'jss/aos.js' %}"></script>
-<!--Javascript file-->
-    <script src="{% static 'jss/main.js' %}">
+  
 
-    </script>
+</body>
+
+
+
+
+
+
+<!--jquery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"  crossorigin="anonymous"></script>
+  <!-- Compiled and minified JavaScript -->
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script src="{% static 'js_materialize/loader.js' %}"></script>
+ </html>
+
+
+
+
+{% include 'footer.html'%}
+
+
+
+

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}   
+{% block content %}
+    <div class="container">
+       
+        
+         
+<article class="media content-section post-content">
+  <img class="rounded-circle article-img" src=" {{ object.img.url}} " alt="">
+    <div class="media-body">
+      <div class="article-metadata">
+        <small class="text-muted">{{ train.date_posted}}</small>
+        {% if object.author == user%} <!--current user (logged in)-->
+       <div>
+
+        
+       </div>
+        
+         {% endif %}
+      </div>
+      <h2 class="article-title">{{ object.title }}</h2>
+      <p class="article-content">{{ object.content }}</p>
+    </div>
+  </article>
+     
+
+    </div>
+{% endblock content %}

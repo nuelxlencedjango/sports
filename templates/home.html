@@ -1,496 +1,258 @@
-
     {% extends 'base.html' %}
-    {% load static %}
-    
+    {% load static %}   
     {% block content %}
-<!--<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogger web</title>-->
-    <!--Font Awesome icons-->
-   <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/all.css' %}">-->
-    <!--Owl Carousel-->
-    <!--<link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.default.min.css' %}"> --?
-    -->
-
-     <!--AOS Animation-->
-     <!--<link rel="stylesheet" type="text/css" href="{% static 'css/aos.css' %}">-->
-    <!--Normal or custom css-->
-    <!--<link rel="stylesheet" type="text/css"  href="{% static 'style/style.css' %} ">
-  
-</head>
-<body>-->
-
-
-   <!-- <nav class="nav">
-        <div class="nav-menu flex-row">
-            <div class="nav-brand">
-                <a href="#" class="text-gray">SportsWeb</a>
-            </div>
-            <div class="toggle-collapse">
-                <div class="toggle-icons">
-                    <i class="fas fa-bars">
-
-                    </i>
-                </div>
-            </div>
-            <div>
-                <ul class="nav-items">
-                    <li class="nav-link">
-                        <a href="">Home</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="/about/">About Us</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="/mission/">Mission</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="/training/">Training</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="/registration/">Registration</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="/contact/">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="social text-gray">
-                <a href="#"><i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#"><i class="fab fa-instagram-square"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-
-        </div>
-    </nav> -->
     
-<!--Main site section-->
-<main>
-    <section class="site-title">
-        <div class="site-background" data-aos="fade-up" data-aos-delay="100">
-            <h3>The Sport Arena</h3>
-            <h1>A Place To Train For The Future</h1>
-           <!-- <h3>Travels & Tours</h3>
-            <h1>Amazing Places on earth</h1>-->
-            <button class="btn">Explore</button>
-        </div>
-
-    </section>
-    <!-- Blog Carousel-->
-    <section>
-        <div class="blog">
-            <div class="container">
-                <div class="owl-carousel owl-theme blog-post">
-                    <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
-                        <img src="{% static 'img/mo.jpg' %} " alt="">
-                        <div class="blog-title">
-                            <h3>Exceptional Talent Hunt !</h3>
-                            <button class="btn btn-blog">Fashion</button>
-                            <span>2 minutes</span>
-                        </div>
-
-                    </div>
-                    <div class="blog-content" data-aos="fade-in" data-aos-delay="200">
-                        <img src="{% static 'img/cr.jpg' %}" alt="blog3">
-                        <div class="blog-title">
-                            <h3>Exceptional Talent Hunt !</h3>
-                            <button class="btn btn-blog">Fashion</button>
-                            <span>2 minutes</span>
-                        </div>
-
-                    </div>
-                    <div class="blog-content" data-aos="fade-left" data-aos-delay="200">
-                        <img src="{% static 'img/ms.jpg' %}" alt="">
-                        <div class="blog-title">
-                            <h3>Exceptional Talent Hunt !</h3>
-                            <button class="btn btn-blog">Fashion</button>
-                            <span>2 minutes</span>
-                        </div>
-
-                    </div>
-                    <div class="blog-content" data-aos="fade-down" data-aos-delay="200">
-                        <img src="{% static 'img/ny.jpeg' %}" alt="">
-                        <div class="blog-title">
-                            <h3>Exceptional Talent Hunt !</h3>
-                            <button class="btn btn-blog">Yet to know what add</button>
-                            <span>2 minutes</span>
-                        </div>
-
-                    </div>
-                    <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
-                        <img src="{% static 'img/mb.jpg' %}" alt="">
-                        <div class="blog-title">
-                            <h3>Exceptional Talent Hunt !</h3>
-                            <button class="btn btn-blog">Yet to know what add</button>
-                            <span>2 minutes</span>
-                        </div>
-
-                    </div>
-                    <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
-                        <img src="{% static 'img/rs.jpg' %}" alt="">
-                        <div class="blog-title">
-                            <h3>Exceptional Talent Hunt !</h3>
-                            <button class="btn btn-blog">Yet to know what add</button>
-                            <span>2 minutes</span>
-                        </div>
-
-                    </div>
-                    <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
-                        <img src="{% static 'img/li.jpg' %}" alt="">
-                        <div class="blog-title">
-                            <h3>Exceptional Talent Hunt !</h3>
-                            <button class="btn btn-blog">Yet to know what add</button>
-                            <span>2 minutes</span>
-                        </div>
-
-                    </div>
-                    <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
-                        <img src="{% static 'img/gb.jpg' %}" alt="">
-                        <div class="blog-title">
-                            <h3>Exceptional Talent Hunt !</h3>
-                            <button class="btn btn-blog">Yet to know what add</button>
-                            <span>2 minutes</span>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="owl-navigation">
-                        <span class="owl-nav-prev"><i class="fas fa-long-arrow-alt-left"></i></span>
-                        <span class="owl-nav-next"><i class="fas fa-long-arrow-alt-right"></i></span>
-            
-                </div>
-            </div>
-        </div>
-
-    </section>
-    
-    <!--Site Contents-->
-    <section class="container">
-        <div class="site-content">
-            <div class="post">
-                <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="post-image">
-                        <div>
-                            <img src="{% static 'img/co.jpg' %}" class="img" alt="blog1">
-                        </div>
-                            
-                            <div class="post-info flex-row">
-                                <span><i class="fas fa-user text-gray">&nbsp;&nbsp; Admin</i></span>
-                                <span>&nbsp;&nbsp;<i class="fas fa-calendar-alt text-gray">&nbsp;&nbsp; January 14</i></span>
-                                <span><i>2 comments</i></span>
-                            </div>
-                    </div>
-                            
-                            <div class="post-title">
-                                <a href="#">Why you should come to us</a>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione et, vel, provident tempore cum molestias porro earum neque fuga blanditiis repellendus sit quasi reprehenderit, maiores cumque non ducimus fugit deleniti?</p>
-                                <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>
-                            </div>
-                        
-                    </div>
-                    <hr>
-                    
-                    
-                    <div class="post-content" data-aos="zoom-in" data-aos-delay="200"> 
-                        <div class="post-image">
-                            <div>
-                                <img src="{% static 'img/oi.jpg' %}" class="img" alt="blog1">
-                            </div>
-                                
-                                <div class="post-info flex-row">
-                                    <span><i class="fas fa-user text-gray">&nbsp;&nbsp; Admin</i></span>
-                                    <span>&nbsp;&nbsp;<i class="fas fa-calendar-alt text-gray">&nbsp;&nbsp; January 31</i></span>
-                                    <span><i>15 comments</i></span>
-                                </div>
-                        </div>
-                                
-                                <div class="post-title">
-                                    <a href="#">The Story Of Ighalo</a>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione et, vel, provident tempore cum molestias porro earum neque fuga blanditiis repellendus sit quasi reprehenderit, maiores cumque non ducimus fugit deleniti?</p>
-                                    <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>
-                                </div>
-                            
-                        </div>
-                        <hr>
-
-                    <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="post-image">
-                            <div>
-                                <img src="{% static 'img/mb.jpg' %}" class="img" alt="blog1">
-                            </div>
-                                
-                                <div class="post-info flex-row">
-                                    <span><i class="fas fa-user text-gray">&nbsp;&nbsp; Admin</i></span>
-                                    <span>&nbsp;&nbsp;<i class="fas fa-calendar-alt text-gray">&nbsp;&nbsp; January 15</i></span>
-                                    <span><i>5 comments</i></span>
-                                </div>
-                        </div>
-                                
-                                <div class="post-title">
-                                    <a href="#">Our Players In Action</a>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione et, vel, provident tempore cum molestias porro earum neque fuga blanditiis repellendus sit quasi reprehenderit, maiores cumque non ducimus fugit deleniti?</p>
-                                    <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>
-                                </div>
-                            
-                        </div>
-                        <hr>
-                    <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="post-image">
-                            <div>
-                                <img src="{% static 'img/gb.jpg' %}" class="img" alt="blog1">
-                            </div>
-                                
-                                <div class="post-info flex-row">
-                                    <span><i class="fas fa-user text-gray">&nbsp;&nbsp; Admin</i></span>
-                                    <span>&nbsp;&nbsp;<i class="fas fa-calendar-alt text-gray">&nbsp;&nbsp; January 29</i></span>
-                                    <span><i>10 comments</i></span>
-                                </div>
-                        </div>
-                                
-                                <div class="post-title">
-                                    <a href="#">Dont You Wish To Be Like This ?</a>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione et, vel, provident tempore cum molestias porro earum neque fuga blanditiis repellendus sit quasi reprehenderit, maiores cumque non ducimus fugit deleniti?</p>
-                                    <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>
-                                </div>
-                            
-                        </div>
-                        <div class="pagination flex-row">
-                            <a href="#"><i class="fas fa-chevron-left"></i></a>
-                            <a href="#" class="page">1</a>
-                            <a href="#" class="page">2</a>
-                            <a href="#" class="page">3</a>
-                            <a href="#" class="page">4</a>
-                            <a href="#" class="page">5</a>
-                            <a href="#"><i class="fas fa-chevron-right"></i></a>
-                        </div>
-                </div>
-                <aside class="sidebar">
-                    <div class="category">
-                        <h2>Category</h2>
-                    </div>
-                   <ul class="category-list">
-                       <li class="list-items" data-aos="fade-left" data-aos-delay="100">
-                           <a href="#">Software</a>
-                           <span>(08)</span>
-                       </li>
-                       <li class="list-items" data-aos="fade-left" data-aos-delay="200">
-                        <a href="#">Technology</a>
-                        <span>(09)</span>
-                    </li>
-                    <li class="list-items" data-aos="fade-left" data-aos-delay="300">
-                        <a href="#">Lifestyle</a>
-                        <span>(15)</span>
-                    </li>
-                    <li class="list-items" data-aos="fade-left" data-aos-delay="400">
-                        <a href="#">Shopping</a>
-                        <span>(05)</span>
-                    </li>
-                    <li class="list-items" data-aos="fade-left" data-aos-delay="500">
-                        <a href="#">Food</a>
-                        <span>(25)</span>
-                    </li>
-                   </ul>
-                    <div class="popular-post">
-                        <h2>Popular Post</h2>
-                        <div class="post-content" data-aos="flip-up" data-aos-delay="200">
-                            <div class="post-image">
-                                <div>
-                                    <img src="{% static 'img/cr.jpg' %}" class="img" alt="blog1">
-                                </div>
-                                    
-                                    <div class="post-info flex-row">
-                                        <span><i class="fas fa-user text-gray">&nbsp;&nbsp; Admin</i></span>
-                                        <span>&nbsp;&nbsp;<i class="fas fa-calendar-alt text-gray">&nbsp;&nbsp; January 15</i></span>
-                                        <span><i>5 comments</i></span>
-                                    </div>
-                            </div>
-                                    
-                                    <div class="post-title">
-                                        <a href="#">New data recording system to better analysis</a>
-                                        <!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione et, vel, provident tempore cum molestias porro earum neque fuga blanditiis repellendus sit quasi reprehenderit, maiores cumque non ducimus fugit deleniti?</p>
-                                        <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>-->
-                                    </div>
-                                
-                            </div>
-                            <div class="post-content" data-aos="flip-up" data-aos-delay="300">
-                                <div class="post-image">
-                                    <div>
-                                        <img src="{% static 'img/ms.jpg' %}" class="img" alt="blog1">
-                                    </div>
-                                        
-                                        <div class="post-info flex-row">
-                                            <span><i class="fas fa-user text-gray">&nbsp;&nbsp; Admin</i></span>
-                                            <span>&nbsp;&nbsp;<i class="fas fa-calendar-alt text-gray">&nbsp;&nbsp; January 15</i></span>
-                                            <span><i>5 comments</i></span>
-                                        </div>
-                                </div>
-                                        
-                                        <div class="post-title">
-                                            <a href="#">New data recording system to better analysis</a>
-                                            <!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione et, vel, provident tempore cum molestias porro earum neque fuga blanditiis repellendus sit quasi reprehenderit, maiores cumque non ducimus fugit deleniti?</p>
-                                            <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>-->
-                                        </div>
-                                    
-                                </div>
-                                <div class="post-content" data-aos="flip-up" data-aos-delay="400">
-                                    <div class="post-image">
-                                        <div>
-                                            <img src="{% static 'img/co.jpg' %}" class="img" alt="blog1">
-                                        </div>
-                                            
-                                            <div class="post-info flex-row">
-                                                <span><i class="fas fa-user text-gray">&nbsp;&nbsp; Admin</i></span>
-                                                <span>&nbsp;&nbsp;<i class="fas fa-calendar-alt text-gray">&nbsp;&nbsp; January 15</i></span>
-                                                <span><i>5 comments</i></span>
-                                            </div>
-                                    </div>
-                                            
-                                            <div class="post-title">
-                                                <a href="#">New data recording system to better analysis</a>
-                                                <!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione et, vel, provident tempore cum molestias porro earum neque fuga blanditiis repellendus sit quasi reprehenderit, maiores cumque non ducimus fugit deleniti?</p>
-                                                <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>-->
-                                            </div>
-                                        
-                                    </div>
    
-                                        <div class="post-content" data-aos="flip-up" data-aos-delay="500">
-                                            <div class="post-image">
-                                                <div>
-                                                    <img src="{% static 'img/gb.jpg' %}" class="img" alt="blog1">
-                                                </div>
-                                                    
-                                                    <div class="post-info flex-row">
-                                                        <span><i class="fas fa-user text-gray">&nbsp;&nbsp; Admin</i></span>
-                                                        <span>&nbsp;&nbsp;<i class="fas fa-calendar-alt text-gray">&nbsp;&nbsp; January 15</i></span>
-                                                        <span><i>5 comments</i></span>
-                                                    </div>
-                                            </div>
-                                                    
-                                                    <div class="post-title">
-                                                        <a href="#">New data recording system to better analysis</a>
-                                                        <!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione et, vel, provident tempore cum molestias porro earum neque fuga blanditiis repellendus sit quasi reprehenderit, maiores cumque non ducimus fugit deleniti?</p>
-                                                        <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>-->
-                                                    </div>
-                                                
-                                            </div>
-                                            <div class="post-content" data-aos="flip-up" data-aos-delay="600">
-                                                <div class="post-image">
-                                                    <div>
-                                                        <img src="{% static 'img/mb.jpg' %}" class="img" alt="blog1">
-                                                    </div>
-                                                        
-                                                        <div class="post-info flex-row">
-                                                            <span><i class="fas fa-user text-gray">&nbsp;&nbsp; Admin</i></span>
-                                                            <span>&nbsp;&nbsp;<i class="fas fa-calendar-alt text-gray">&nbsp;&nbsp; January 15</i></span>
-                                                            <span><i>5 comments</i></span>
-                                                        </div>
-                                                </div>
-                                                        
-                                                        <div class="post-title">
-                                                            <a href="#">New data recording system to better analysis</a>
-                                                            <!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione et, vel, provident tempore cum molestias porro earum neque fuga blanditiis repellendus sit quasi reprehenderit, maiores cumque non ducimus fugit deleniti?</p>
-                                                            <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>-->
-                                                        </div>
-                                                    
-                                                </div>
-                    </div>
-                    <div class="newsletter" data-aos="fade-up" data-aos-delay="300">
-                        <h2>News Letter</h2>
-                        <div class="form-element">
-                            <input type="text" class="input-element" placeholder="Email">
-                            <button class="btn form-btn">Subscribe</button>
+   
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<!--<link href="/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+    <!--<link href="album.css" rel="stylesheet">-->
+    
+    <style>
+
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+      
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+      </style>
+
+
+
+
+      <!-- Custom styles for this template -->
+      <!--<link href="album.css" rel="stylesheet">-->
+
+
+
+      
+
+        <div class="full-width light part-item-set">
+            <section style="margin-top: 70px;">
+                <h2 style="text-align: center;"> Team News</h2>
+                <div class="flex-container">
+                    {% for item  in train %}
+                    <a href="#">
+                    <div class="card" style="width: 18rem; height: 30rem;">
+                        <img src="{{ item.img.url }}" class="card-img-top" alt="...">
+                        <div class="card-body" style="background: #fff;">
+                            <span>author:{{ item.author }} </span>
+
+                            <small style="text-align: right;">date :{{ item.date_posted }}</small>
+                         
+                          <h5><a class="card-title" href="{% url 'info:detail' item.id %}" style="color: #0008; font-size: medium; font-size: x-large;">{{ item.title }}</h5>
+                         
+                        
+                            
+                             <!--<small>Trainer/Coach : {{ blog.trainer }}</small><br>-->
+                        
+                          <!--<a href="" class="cta">Learn more <i class="fal fa-angle-right" aria-hidden="true"></i></a>-->
+                          <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
                         </div>
+                      </div>
+                    </a>
+                      {% endfor %}
+                     </div>
+            </section>
+
+
+                <div class="full-width dark part-featured-slider">
+                    <div class="row contained align-middle">
+                    <div class="small-12 medium-6 columns large-6 columns featured-slider-content">
+                       <div class="slick-silder image-slider slick-initialized slick-slider">
+                        <!-- <button class="slick-prev slick-arrow" aria-label="Previous"
+                          type="button" style="">Previous</button>-->
+                          <div class="slick-list draggable">
+                            <div class="slick-track" style="opacity: 1; width: 4212px; transform: translate3d(-1872px, 0px, 0px);">
+                              <div class="slick-slide slick-cloned" data-slick-index="-1" id="" aria-hidden="true" 
+                              tabindex="-1" style="width: 468px;">
+                              <div>
+                                <img src="" alt="" style="width: 100%; display: inline-block;">
+                              </div>
+                            </div>
+                            <div class="slick-slide" data-slick-index="0" aria-hidden="true" 
+                            style="width: 468px;" tabindex="-1">
+                            <div>
+                              <img src="" alt="" 
+                              style="width: 100%; display: inline-block;">
+                            </div>
+                          </div>
+                          <div class="slick-slide" data-slick-index="1" aria-hidden="true" style="width: 468px;" tabindex="-1">
+                            <div>
+                              <img src="" alt="" 
+                              style="width: 100%; display: inline-block;">
+                            </div>
+                          </div>
+                          <div class="slick-slide" data-slick-index="2" aria-hidden="true" 
+                          style="width: 468px;" tabindex="-1">
+                          <div>
+                            <img src="" alt=""
+                             style="width: 100%; display: inline-block;">
+                            </div>
+                          </div>
+                          <div class="slick-slide slick-current slick-active" data-slick-index="3" aria-hidden="false" style="width: 468px;">
+                            <div style="padding-left: 50px;"><img src="{% static 'img/footballer1.jpg' %}" alt="" style="width: 100%; display: inline-block; height: 400px;">
+                            </div>
+                          </div>
+                          
+                      </div>
                     </div>
-                    <div class="popular-tags">
-                        <h2>Popular Tag</h2>
-                        <div class="tags flex-row">
-                            <span class="tag" data-aos="flip-up" data-aos-delay="100">Training</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="200">Programs</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="300">Design</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="400">Technology</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="500">Travel</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="600">Lifestyle</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="700">Software</span>
-                        </div>
+                    <!--<button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button>-->
+                  </div>
                     </div>
-                </aside>
+                    <div class="small-12 medium-6 large-5 large-offset-1 columns featured-slider-content">
+                       <h2>Our Campus</h2>
+                                <h3>Train, Think and Recover in Elite Environments</h3>
+                                <div class="message"><p class="p1">Sports Academy is a 100,000 square-foot facility that houses five basketball courts, five volleyball courts, two beach volleyball courts, a turf field, combatives and self-defense dojo, a comprehensive sports medicine practice for medical therapy and rehabilitation, a biomechanics lab, a world-class cognitive training lab, an e-sports training ground, batting cages and pitching mounds, a mondo sprint track, a learning center for academic tutoring and training, and a yoga/cycling studio.</p>
+                  </div>
+                             </div>
+                  </div>
+                  
+                  <div class="reg" style="text-align: center;">
+                    <!--<button style="padding-right: 50px;">Register for free</button>-->
+                    <a id="myDiv" href="{% url 'info:registration' %}"><h2> join us today !</h2></a>
+                   
+                  </div>
+                  </div> 
+              
+
+<!-- we are here-->
+
+         
+<div class="album py-5 bg">
+  <div class="container">
+    <h2 style="text-align: center;">Training news</h2>
+    <div class="row">
+        {% for item in post %}
+      <div class="col-md-3">
+        <div class="card mb-3 shadow-sm">
+          <img src="{{ item.img.url }}" width="100%" height="225" alt="">
+          <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+          <div class="card-body" style="height: 150px;">
+               <h5><a style="color: #0008; font-size: medium;"  href="{% url 'info:news_detail' item.id %}">{{ item.title }}</a></h5>
+         
+               
+     
+            <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">{{ item.content |truncatewords:15}}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <!--<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+              </div>
+              <small class="text-muted">9 mins</small>
             </div>
-           
+          </div>
         </div>
-        
-    </section>
-</main>
-<!-- End of main site section-->
+      </div>
+      {% endfor %}
+     
+    </div>
+  </div>
+  </div>
+ 
+  
+<section class="team">
+    <div class="container">
+        <h1>meet our coaches</h1>
+        <div class="row">
+          {% for coach in coach %}
+            <div class="col-md-3 profile text-center">
+                <div class="img-box">
+                    <img src="{{ coach.img.url }}" alt="" class="ima-responsive" width="100%" height="225">
+                    <ul class="soc">
+                        <a href="https://www.facebook.com/nuel.edward"><li><i class="fab fa-facebook-f"></i></li></a>
+                        <a href=""><li><i class="fab fa-twitter"></i></li></a>
+                        <a href=""><li><i class="fab fa-instagram"></i></li></a>
+                        <a href=""><li><i class="fab fa-pinterest"></i></li></a>
+                    </ul>
+                </div>
+                <h2>{{ coach.name }}</h2>
+                <h3>{{ coach.position }}</h3>
+                <p>{{ coach.about }}</p>
+            </div>
+            {% endfor %}
+            <!--<div class="col-md-3 profile text-center">
+                <div class="img-box">
+                    <img src="/static/img/ms.jpg" alt="" class="ima-responsive" width="100%" height="225">
+                    <ul class="soc">
+                        <a href="#"><li><i class="fab fa-facebook-f"></i></li></a>
+                        <a href=""><li><i class="fab fa-twitter"></i></li></a>
+                        <a href=""><li><i class="fab fa-instagram"></i></li></a>
+                        <a href=""><li><i class="fab fa-pinterest"></i></li></a>
+                    </ul>
+                </div>
+                <h2>nuel edward</h2>
+                <h3>founder /ceo</h3>
+                <p>Lorem ipsum doi sitatque autem consequatur repudiandae officiis ratione!</p>
+            </div>
+            <div class="col-md-3 profile text-center">
+                <div class="img-box">
+                    <img src="/static/img/mo.jpg" alt="" class="ima-responsive" width="100%" height="225">
+                    <ul >
+                        <a href="#"><li><i class="fab fa-facebook-f"></i></li></a>
+                        <a href=""><li><i class="fab fa-twitter"></i></li></a>
+                        <a href=""><li><i class="fab fa-instagram"></i></li></a>
+                        <a href=""><li><i class="fab fa-pinterest"></i></li></a>
+                    </ul>
+                </div>
+                <h2>nuel edward</h2>
+                <h3>founder /ceo</h3>
+                <p>Lorem ipsum doi sitatque autem consequatur repudiandae officiis ratione!</p>
+            </div>
+            <div class="col-md-3 profile text-center">
+                <div class="img-box">
+                    <img src="/static/img/rs.jpg" alt="" class="ima-responsive" width="100%" height="225">
+                    <ul>
+                        <a href="#"><li><i class="fab fa-facebook-f"></i></li></a>
+                        <a href=""><li><i class="fab fa-twitter"></i></li></a>
+                        <a href=""><li><i class="fab fa-instagram"></i></li></a>
+                        <a href=""><li><i class="fab fa-pinterest"></i></li></a>
+                    </ul>
+                </div>
+                <h2>nuel edward</h2>
+                <h3>founder /ceo</h3>
+                <p>Lorem ipsum doi sitatque autem consequatur repudiandae officiis ratione!</p>
+            </div>-->
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+</div>
+       <!--some fixture-->
+      
+
+
+
+
+
 
 
 {% endblock content %}
 
-<!--<footer class="footer">
-    <div class="container">
-    <div class="about-us" data-aos="fade-right" data-aos-delay="200">
-        <h2>About us</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ducimus delectus explicabo tempore odio fugiat possimus saepe sint repudiandae iusto!</p>
-    </div>
-    <div class="newsletter" data-aos="fade-right" data-aos-delay="300">
-        <h2>Newsletter</h2>
-        <p>Stay updated with our latest</p>
-        <div class="form-element">
-            <input type="text" placeholder="Email"><span><i class="fas fa-chevron-right"></i></span>
-        </div>
-    </div>
-    <div class="instagram" data-aos="fade-right" data-aos-delay="400">
-        <h2>Instagram</h2>
-        <div class="flex-row">
-            <img src="{% static 'img/flower1.jpg' %}" alt="">
-            <img src="{% static 'img/flowers2.jpg' %}" alt="">
-            <img src="{% static 'img/coding1.jpg' %}" alt="">
-            <img src="{% static 'img/love.jpg' %}" alt="">
-        </div>-->
-       <!-- <div class="flex-row">
-            <img src="{% static 'img/city.jpg' %}" alt="">
-            <img src="{% static 'img/prog.jpg' %}" alt="">
-            <img src="{% static 'img/teaching.jpg' %}" alt="">
-            <img src="{% static 'img/girl.jpg' %}" alt="">
-        </div>-->
-   <!--- </div>
-    <div class="follow" data-aos="fade-right" data-aos-delay="500">
-        <h2>Follow Us</h2>
-        <p>Let us be social</p>
-        <div>
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-youtube"></i>
-        </div>
-    </div>
-   
-</div>
-<div class="rights flex-row">
-    <h3 class="text-gray">
-        Copyright @2020 All right reserved | made by
-        <a href="www.nuelonline.com" target="black">NuelTech</a>
-    </h3>
-</div>
-<div class="move-up">
-    <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
-</div>
-</footer>-->
-
-
-<!--Jquery library file-->
-<!--<script src="{% static 'jss/jquery3.5.1.min.js' %}"></script>-->
-
-<!--Owl Carousel js-->
-<!--<script src="{% static 'jss/owl.carousel.min.js' %}"></script>-->
- <!--AOS js Animation-->
- <!--<script src="{% static 'jss/aos.js' %}"></script>-->
-<!--Javascript file-->
-    <!--<script src="{% static 'jss/main.js' %}">
-
-    </script>
-</body>
-</html>-->
