@@ -3,17 +3,13 @@ from django.urls import path
 from .views import *
 from .import views 
 
-#from django.contrib.auth import views as auth_views
 
-#from .views import (
-#    HomeView,
-#)
 
 
 app_name ="info"
 
 urlpatterns = [
-   # path('' , HomeView.as_view() ,name="HomeView"),
+  
     path('' ,PostListView.as_view() ,name='home'),
 
     path('<int:pk>/' , PostDetailView.as_view() ,name="detail"),
@@ -22,12 +18,8 @@ urlpatterns = [
      path('' ,NewsListView.as_view() ,name='home'),
   
 
-    #path('login/',auth_views.LoginView.as_view(template_name="login.html") ,name='login'),
-    #path('logout/' , auth_views.LogoutView.as_view(template_name="logout.html") ,name="logout"),
-
-
     path('' ,TrainListView.as_view() ,name='home'),
-     #path('updated/',views.updated ,name='updated'),
+   
     path('post/new/' , PostCreateView.as_view() ,name="create"),
 
     path('post/<int:pk>/delete/' , PostDeleteView.as_view() ,name="delete"),
@@ -40,12 +32,7 @@ urlpatterns = [
  path('editSpa/<int:id>/',views.editSpa ,name='editSpa'),
  path('editIta/<int:id>/',views.editIta ,name='editIta'),
  path('editFre/<int:id>/',views.editFre ,name='editFre'),
-
-
- #path('editPrem/<int:id>/',views.editPrem ,name='editPrem'),
-
-#path('editTuk/<int:id>/',views.edit ,name='editTuk'),
-#path('editTuk/<int:id>/',views.editTuk ,name='editTuk'),
+,
 
 #update
  #path('updateNig/<int:id>/',views.updateNig ,name='updateNig'),
@@ -55,8 +42,6 @@ urlpatterns = [
  path('updateIta/<int:id>/',views.updateIta ,name='updateIta'),
  path('updateFre/<int:id>/',views.updateFre ,name='updateFre'),
 
- #path('updateTuk/<int:id>/',views.updateTuk ,name='updateTuk'),
-# path('updateSpain/<int:id>/',views.updateSpain ,name='updateSpain'),
 
     path('matches/' , MatchView.as_view() ,name="matches"),
     path('edit/<int:id>/',views.edit ,name='edit'),
@@ -90,24 +75,17 @@ urlpatterns = [
 
    path('players_info/' , PlayersView.as_view() ,name="players_info"),
 
+
     path('search/', views.search , name='search'),
     path('about/',views.about ,name='about'),
     path('training/',TrainListView.as_view() ,name='training'),
     path('registration/',views.registration ,name='registration'),
     path('contact/',views.contact ,name='contact'),
     path('mission/',views.mission ,name='mission'),
-    #path('matches/',views.matches ,name='matches'),
-
-
-
-
-
-
-
-    #path('updateData/<int:id>/',views.updateData ,name='updated'),
+ 
     path('services/',views.services ,name='services'),
-    #path('login/',views.login ,name='blog-login'),
-    #path('logout/',views.logout ,name='blog-logout'),
+  
+   
 
     path('reachgold/',views.reachgold ,name='reachgold'),
     path('personal/',views.personal ,name='personal'),

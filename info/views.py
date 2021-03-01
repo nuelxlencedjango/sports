@@ -1,4 +1,4 @@
-#from django.views.generic import View
+
 
 from django.shortcuts import render ,redirect ,get_object_or_404
 from django.views.generic.base import TemplateView
@@ -9,7 +9,7 @@ from django.views.generic import (
 from django.contrib.auth.models import User 
 from django.contrib.auth.mixins import LoginRequiredMixin ,UserPassesTestMixin
 from .models import *
-from .forms import * #PlayersForms # PlayerRegisterForm
+from .forms import * 
 from django.http import Http404
 
 from django.contrib import messages
@@ -21,63 +21,9 @@ from django.conf import settings
 
 
 
-# Create your views here.
-
-#from django.conf import settings
-#from django.contrib import messages
-#from django.core.exceptions import ObjectDoesNotExist
-#from django.contrib.auth.decorators import login_required
-#from django.contrib.auth.mixins import LoginRequiredMixin
-
-#from django.views.generic import ListView ,DetailView ,View 
-#from .forms import checkoutForm ,CouponForm,RefundForm,PaymentForm
-#from django.views.generic.detail import  DetailView
-#from django.views.generic import  View
-#from django.shortcuts import redirect
-#from django.utils import timezone
-#from .forms import CheckoutForm
-# , CouponForm, RefundForm, PaymentForm
-#from .models import Item, OrderItem ,Order,Address,Payment ,Coupon,Refund,UserProfile
-#import random
-#import string
-#import stripe
-
-#from django.shortcuts import render
-#from .models import *
-#from django.http import JsonResponse
-#import json
-#import datetime
-#from .utility import *
-
-#context ={
- #   'posting' : News.objects.all(),
-  #  'posts' : Post.objects.all(),
-  #  'training' :Training.objects.all()
-
-#}
-    
-#def news(request):
- #   newspost = Ne.objects.raw("select max(salary) from emp")
-  #   "select empid,empname,salary from emp order by salary desc limit 1"
-   # "select empid,empname,salary from emp order by salary asc limit 2"
-    #"select empid,empname,salary from emp e1 where '+salary+'=(select count(distinct salary) from emp e2 where e1.salary>=e2.salary"
-  
-  #  return render(request ,'home.html' ,{'posting' : newspost }) 
-
-#def recieveMail(request):
- #   if request.method ==' POST':
-  #      message = request.POST['message']
-   #     send_mail('conctact form' ,message ,settings.EMAIL_HOST_USER,
-    #    ['nuel4xelence@gmail.com'],
-     #   fail_silently=False)
-
-   # return render (request ,'contacts.html')    
-
-
 
 class NewsListView(ListView):
-    #model = Post # model name
-    #queryset = News.objects.all()
+ 
     template_name = ".html"  # template name/path
     context_object_name ="post" # context properties
     ordering =['-date_posted']   # arraned according date posted
@@ -89,9 +35,7 @@ class TrainListView(ListView):
     model = Training # model name
     template_name = 'training.html'  # template name/path
     context_object_name ='training' # context properties
-    ordering =['-date_posted']   # arraned according date posted
-    #paginate_by =5
-   # fetching posts from a particular poster
+    ordering =['-date_posted']   # arrange according date posted
 
 class UserPostListView(ListView):
     model = Post # model name
@@ -117,33 +61,7 @@ class PostDetailView(DetailView):
 class NewsDetailView(DetailView):
     model = Post
     template_name = 'details.html' 
-#def post_detail(request,id):
-    #obj = get_object_or_404(Post ,id=id)
-    #return render(request ,'post_detail.html' ,{'obj' :obj})
 
-
-# creating a post class
-class PostCreateView(LoginRequiredMixin, CreateView):
-    model = Post 
-    fields =['title' ,'content']
-    template_name = 'post_form.html' 
-
-    # creating instance of user to make a post
-    def form_valid(self , form):
-        form.instance.author = self.request.user
-        return super().form_invalid(form) # come back
-
-
-# creating a post class
-class PostCreateView(LoginRequiredMixin, CreateView):
-    model = Post 
-    fields =['title' ,'content']
-    template_name = 'post_form.html' 
-
-    # creating instance of user to make a post
-    def form_valid(self , form):
-        form.instance.author = self.request.user
-        return super().form_invalid(form)
 
 
 
@@ -168,78 +86,6 @@ def registration(request):
 
 
 
-
-
-    #if request.method == "GET":
-       # form = PlayersForms()
-       # return render(request ,'register.html' ,{'form':form})
-
-    #else:
-       # form = PlayersForms(request.POST)
-       # print(form)
-       # if form.is_valid():
-            #print(form.firstname.data)
-           # form.save()
-         
-        #else:
-         #   print('invlad data')
-
-        #return redirect('info:home')
-    
-
-#def index(request):
- #   form = CustomerForm()
-
-  #  if request.method =='POST':
-   #     form =CustomerForm(request.POST)
-    ##       form.save()
-
-    #context = {'form':form}
-    #return render(request ,'customer.html',context)
-
-
-
-#def register(request):
- ##      form = PlayersForm()
-   #     return render(request ,'register.html' ,{'form':form})
-
-    #else:
-
-     #   form = PlayersForm(request.POST)
-      #  if form.is_valid():
-       #     form.save()
-        #return redirect('news:home')
-
-class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
-    model = Post 
-    success_url = '/'
-    #template_name = 'post_detail.html' 
-
-    #authenticating the author of the post
-    def test_func(self):
-        post = self.get_object() # object -current user
-        if self.request.user == post.author: # author of the post
-            return True
-        return False    
-
-def about(request):
-
-    return render(request ,'about.html')
-
-
-def mission(request):
-    return render(request ,'mission.html')
-
-def training(request):
-
-    return render(request ,'training.html')
-
-
-#def matches(request):
-  #  up_matches = ImportantMatches.objects.all()
-    
-  #  return render(request ,'matches.html' ,
-  #  {'upComingMatches' : up_matches} )
 
  
      
@@ -305,61 +151,9 @@ class MatchView(TemplateView):
         context['spain'] =Laliga.objects.order_by('-point' ,'-goalf')
         context['germany'] =Bundesliga.objects.order_by('-point' ,'-goalf')
         context['france'] =Ligue1.objects.order_by('-point' ,'-goalf')
-        #context['turkey'] =Turkey.objects.order_by('-point' ,'-goalf')
-        #context['prem'] =PremierS.objects.order_by('-point' ,'-goalf')
         return context
 
-    #pagination
-    #paginate_by =5
-        
-    #ordering =['-date_posted']   # arraned according date posted
-    #paginate_by =5
 
-
-#not useful
-def insert_english(request):
-    english = Premiership.objects.all()
-    contex ={
-        'english' : english,
-        'league' : premiership
-    }
-    return render(request ,'match.html' ,contex)
-
-
-def insert_spain(request):
-    spainish = Laliga.objects.all()
-    contex ={
-        'spain' : laliga,
-        'league' : spanish
-    }
-    return render(request ,'match.html' ,contex)
-
-
-def insert_france(request):
-    french = Ligue1.objects.all()
-    contex ={
-        'france' : french,
-        'league' : french
-    }
-    return render(request ,'match.html' ,contex)  
-
-
-def insert_germany(request):
-    germany = Bundesliga.objects.all()
-    contex ={
-        'germany' : germany,
-        'league' : german
-    }
-    return render(request ,'match.html' ,contex)  
-
-
-def insert_italy(request):
-    italy = SerieA.objects.all()
-    contex ={
-        'italy' : italy,
-        'league' : seriea
-    }
-    return render(request ,'match.html' ,contex)   
 
 
 def add_team(request ,cls):
@@ -373,24 +167,6 @@ def add_team(request ,cls):
     else:
         form = cls()
         return render(request ,'create.html' ,{'form' :form})            
-
-# end here
-
-#def add_english(request):
- #   return add_team(request ,PremiershipForm)
-
-
-###def add_german(request):
-   # return add_team(request ,BundesligaForm)
-
-#def add_italian(request):
- #   return add_team(request ,ItalianSerieAForm)
-
-#def add_french(request):
- #   return add_team(request ,Ligue1Form)
-
-
-
 
 
 
@@ -422,50 +198,10 @@ def delete_team(request,id):
     context ={
         'item':items
     }
-    return render(request ,'match.html' ,context)    
-#class PostUpdateView(UpdateView):
-
-  #  template_name = 'home.html'
-  #  form_class = EnglishForm
-  #  print('form:' ,form_class)
-    #queryset = EnglishLeague.objects.all()
-    #print(queryset)
-    #success_url='/'
-  
-    #model = EnglishLeague
-    #fields =['team_name' ,'played' ,'win','lost','draw' ,'goalf' ,'goala' ,'point']
-    #template_name = 'update.html'
+    return render(request ,'match.html' ,context)   
+ 
 
 
-    #def get_object(self):
-     #   id = self.kwargs.get('id')
-      ## return get_object_or_404(EnglishLeague ,id=id)
-      
-
-    #def form_valid(self ,form):
-     #   print(form.cleaned_data)
-      #  return super().form_valid(form)     
-
-
-def updateTuk(request, id):
-    display =Turkey.objects.get(id =id)
-    form =TurkeyForm(request.POST, instance =display)
-
-    print("form:" ,form)
-    if request.method == 'POST':
-        form =TurkeyForm(request.POST or None, instance =display)
-        try:
-            if form.is_valid():
-                form.save(commit =True)
-                messages.success(request ,"successfully updated")
-                return redirect('info:matches')
-            else:
-                print("invalid form ")
-        #context = {'form':form}
-        except:
-            print('not working yet')    
-
-    return render(request ,'matches.html')
 
 
 
@@ -513,9 +249,7 @@ def edit_team(request ,id,model,cls):
 def updateEng(request,id):
     return updateData(request,id,Premiership,PremiershipForm)
 
-
-#def updateNig(request,id):
- #   return edit_team(request,id,PremierS,PremierSForm)    
+ 
 
 
 def updateGer(request,id):
@@ -530,10 +264,6 @@ def updateIta(request,id):
 
 def updateFre(request,id):
     return edit_team(request,id ,Ligue1,Ligue1Form)  
-
-
-#def updateTuk(request,id):
-    #return edit_team(request,id ,Turkey,TurkeyForm)     
 
 
     
@@ -571,10 +301,6 @@ def editFre(request,id):
 def editTuk(request,id):
     return edit(request,id ,Turkey)  
 
-#def edit(request ,id):
- #   display = ItalianSerieA.objects.get(id =id)
-  #  return render(request ,'update.html' ,{'display' :display})
-
 
 
 def insert_view(request):
@@ -592,23 +318,6 @@ def insert_view(request):
 
 
 
-
-
-#def update_view(request ,id):
-    #italy =ItalianLeague.objects.get(id=id)   
-    #form = ItalianLeagueForm(request.POST,instance=italy)
- 
-    #contacts = ContactUs(name=message_name ,phone=message_phone ,email=message_email ,message=message)
-    #if form.is_valid():
-      #  form.save(commit=True)
-     #   print('successful')
-    #    return redirect('/')
-   # else:
-            # Do something in case if form is not valid
-     #   raise Http404     
-     #   print('form is not valid')  
-    #italy = reverse('info:updated', italy.id)      
-    #return render(request ,'update.html' ,{'italy' :italy})    
 
 
 
@@ -632,27 +341,11 @@ def spainish(request):
     return render(request ,'top_league.html' ,{'form' :form})
 
 
-#def updated(request , name):
-  #  if request.method =='POST':
-      #  eng = EnglishLeague.objects.get(pk =name)
-      #  form = EnglishForm(request.POST or None ,instance =eng)
-
-      #  if form.is_valid():
-         #   form.save()
-     #   return redirect('update.html')   
-
-   # else:
-       # eng = EnglishLeague.objects.get(pk = name)     
-       # return render(request ,'update.html' ,eng)
 
 
 def services(request):
-
     return render(request ,'services.html')
 
-#def registration(request):
-
- #   return render(request ,'registration.html')
 
 def contact(request):
     if request.method =='POST':
@@ -707,6 +400,18 @@ def personal(request):
     
 
 
+
+def about(request):
+
+    return render(request ,'about.html')
+
+
+def mission(request):
+    return render(request ,'mission.html')
+
+def training(request):
+
+    return render(request ,'training.html')
 
 
 

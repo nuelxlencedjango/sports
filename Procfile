@@ -1,1 +1,1 @@
-web: gunicorn  nuel_app.wsgi
+web: gunicorn  sportsweb.wsgi
