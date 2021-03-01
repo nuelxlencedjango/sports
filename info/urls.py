@@ -20,9 +20,9 @@ urlpatterns = [
 
     path('' ,TrainListView.as_view() ,name='home'),
    
-    path('post/new/' , PostCreateView.as_view() ,name="create"),
+    #path('post/new/' , PostCreateView.as_view() ,name="create"),
 
-    path('post/<int:pk>/delete/' , PostDeleteView.as_view() ,name="delete"),
+    #path('post/<int:pk>/delete/' , PostDeleteView.as_view() ,name="delete"),
     path('user/<str:username>' , UserPostListView.as_view() ,name="posts"),
 
 
@@ -32,7 +32,7 @@ urlpatterns = [
  path('editSpa/<int:id>/',views.editSpa ,name='editSpa'),
  path('editIta/<int:id>/',views.editIta ,name='editIta'),
  path('editFre/<int:id>/',views.editFre ,name='editFre'),
-,
+
 
 #update
  #path('updateNig/<int:id>/',views.updateNig ,name='updateNig'),
@@ -48,11 +48,11 @@ urlpatterns = [
 
     path('updated/<int:id>/',views.updateData ,name='updated'),
 
-    path('english/',views.insert_english ,name='english'),
-    path('italy/' , views.insert_italy ,name="italy"),
-    path('germany/',views.insert_germany ,name='germany'),
-    path('france/' ,views.insert_france ,name="france"),
-    path('spain/',  views.insert_spain ,name='spain'),
+   # path('english/',views.insert_english ,name='english'),
+    #path('italy/' , views.insert_italy ,name="italy"),
+    #path('germany/',views.insert_germany ,name='germany'),
+    #path('france/' ,views.insert_france ,name="france"),
+    #path('spain/',  views.insert_spain ,name='spain'),
 
 
    path('delete_item/',  views.delete_team ,name='delete_item'),
@@ -85,10 +85,6 @@ urlpatterns = [
  
     path('services/',views.services ,name='services'),
   
-   
-
-    path('reachgold/',views.reachgold ,name='reachgold'),
-    path('personal/',views.personal ,name='personal'),
 
 
 

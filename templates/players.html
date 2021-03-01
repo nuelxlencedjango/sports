@@ -9,24 +9,24 @@
   aria-label="search">
   <button type="submit" class="minbtn" >Search For A Player</button>
 </form>
-<section style="margin-top: 70px;">
+<section style="margin-top: 30px;" class="players">
     <h2 style="text-align: center;">Players Details</h2>
     <div class="flex-container">
         {% for player in footballers %}
         <a href="#">
         <div class="card" style="width: 18rem; height: 30rem;">
-            <img src="{{ player.image.url }}" class="card-img-top" alt="...">
-            <div class="card-body" style="background: #fff;">
+            <img src="{{ player.image.url }}" class="card-img-top" alt="..." style="height: 14rem;">
+            <div class="card-body" style="background: #fff; height: 1.5rem;">
               
 
-                <h5 style="text-align: right;">{{ player.first_name }}</h>
+                <h5 style="text-align: left;">First Name :{{ player.first_name }}</h5>
              
-              <h5><a class="card-title" href="">{{ player.last_name }}</a></h5>
-              <p class="card-text">{{ player.address }} 
-              <p class="card-text">{{ player.phone }} 
+              <h5 style="text-align: left;"> Last Name:{{ player.last_name }}</h5>
+              <p class="card-text">Address:{{ player.address }} </p>
+              <p class="card-text"> Phone:{{ player.phone }} </p>
                
-                <p class="card-text">{{ player.position }} 
-                <p class="card-text">{{ player.email }}    
+                <p class="card-text">Playing position:{{ player.position }} </p>
+                <p class="card-text">Email :{{ player.email }} </p>   
                 
                  <!--<small>Trainer/Coach : {{ blog.trainer }}</small><br>-->
             

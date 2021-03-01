@@ -15,15 +15,6 @@ body {
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
 }
-/*html ,body{
-   
-   height: 100%;
-   place-items: center;
-   text-align: center;
-   background: #f2f2f2;
-}*/
-/* check for responsive web*/
-
 .nav-wrapper{
    background-color: #000;
    height: 50px;
@@ -121,11 +112,7 @@ body {
    padding-bottom: 20px;
 
 }
-/*.full-width .card{
-   background-color: #000;
-   color: #fff;
-   transition: 2s;
-}*/
+
 
 .card-body small{
    color: #000;
@@ -152,9 +139,7 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
    cursor: pointer;
    top: -15px;
 }
-.card-title{
-   color: red;
-}
+
 .card-body h5:hover{
    background-color: #000;
    color: #fff;
@@ -171,6 +156,7 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
    /*overflow-wrap: break-word;*/
    word-wrap: break-word;
    word-break: break-all;
+   margin-bottom: 10px;
    /*overflow: hidden;
    grid-column: auto;*/
 }
@@ -279,44 +265,10 @@ h2 {
    margin-top: 70px;
 }
 
-/*.read{
-   position: relative;
-   top: -60px;
-   width: 108%;
-   padding-bottom: 10px;
-   margin-right: 430px;
-   text-align: right;
-   color: red;
-   
-}*/
-/* first carousel */
-
-
-/*main .slider{
-   margin-top: 30px;
-   background-color: red;
-   
-}*/
-
-
-/*.rowr {
-   max-width: 1440px;
-   margin-right: auto;
-   margin-left: auto;
-   display: -webkit-box;
-   display: -webkit-flex;
-   display: -ms-flexbox;
-   display: flex;
-   -webkit-box-orient: horizontal;
-   -webkit-box-direction: normal;
-   -webkit-flex-flow: row wrap;
-   -ms-flex-flow: row wrap;
-   flex-flow: row wrap;
-   background-color: green;
-}*/
-
-
-
+.players{
+   background-color: rgba(0, 0, 0, 0.8);
+   height: 150rem;
+}
 
 
 
@@ -408,23 +360,7 @@ aside#sidebar .team-btw-match ul {
    left: 40px;
    width: 100%;
 }
-/* our team to be removed */
 
-
-
-/* end here */
-
-
-/*.html ,body{
-   display: grid;
-   height: 100%;
-   place-items: center;
-   text-align: center;
-
-}*/
-/* our team */
-
-/* our team */
 .team-holder {
    float: left;
    width: 100%;
@@ -524,75 +460,6 @@ aside#sidebar .team-btw-match ul {
    color: #fff;
    border: 1px solid #fff;
 }
-
-/*.our-team{
-   background-color: #000;
-   width: 100%;
-   top: 50%;
-   left: 50%;
-   
-   transform: translate(-50% ,-50%);
-   padding: 70% 0 70% 0;
-}
-.page-title{
-   font-size: 30%;
-   font-weight: 400;
-}
-.page-title span{
-   font-weight: 800;
-   color: #ce0000;
-}*/
-/*.part-item-sett .item-img-contt imgg {
-   object-fit: cover;
-   width: 300px;
-   height: 250px;
-   max-height: 300px;
-}
-img {
-   border-style: none;
-}
-img {
-   display: inline-block;
-   vertical-align: middle;
-   max-width: 100%;
-   height: auto;
-   -ms-interpolation-mode: bicubic;
-}
-img {
-   border-style: none;
-}*/
-
-
-/*.part-item-sett .item-contentt {
-   color: #fff;
-   padding: 24px 0 24px 0;
-}
-
-.part-item-set .item-content strong.content-title {
-   font-size: 18px;
-   color: #fff;
-   text-transform: none;
-}*/
-
-
-/*.part-item-set .item-content p {
-   margin-bottom: 0!important;
-}*/
-
-
-
-
-
-/*user agent stylesheet*/
-/*.small-1 {
-   -webkit-box-flex: 0;
-   -webkit-flex: 0 0 100%;
-   -ms-flex: 0 0 100%;
-   flex: 0 0 100%;
-   max-width: 100%;
-}*/
-
-
 
 
 
