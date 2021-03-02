@@ -1,0 +1,51 @@
+
+
+    {% extends "base.html" %}
+    {% load crispy_forms_tags %}
+    {% block content %}
+      <div class="container">
+         <form method="POST"  class="post-form">
+             {% csrf_token %}
+             <fieldset class="form-group">
+                 <legend class="border-bottom mb-4">Join Today</legend>
+                
+                 {{ form }}
+
+             </fieldset>
+             <div class="form-group">
+                 <button class="btn btn-outline-info" type="submit">Sign Up</button>
+             </div>
+         </form>
+         <input type="submit" value="Submit"> 
+         <button type="submit" class="save btn btn-default">Save</button>  
+     
+         <div class="border-top pt-3">
+             <small class="text-muted">
+                 Already have an accoutn? <a class="ml-2" href="">Sign In</a></small>
+
+         </div>
+         <input type="submit" value="Submit"> 
+         <button type="submit" class="save btn btn-default">Save</button>  
+      </div>
+
+      {% for train in training %}
+      <div class="upcoming-image">
+          <div class="img">
+          
+              <img src="{{ train.img.url }}" class="img" style="height: 180px; width: 280px;" alt="blog1">        
+          </div>
+          <div class="img_info">
+              <h3>{{ train.title }}</h3>
+              <p>{{ train.content }}</p>
+
+              <h5>View Events</h5>
+              <h4>{{ train.date_posted }}</h4>
+          </div>
+          </div>    
+          {% endfor %}     
+    </div>
+
+
+  {% endblock content %}
+
+  
